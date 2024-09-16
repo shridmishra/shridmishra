@@ -6,7 +6,7 @@ import {Intro} from "../components/Intro";
 import { Details} from "../components/Details";
 export default function Home() {
   return (
-  <div className="font-poppins">
+  <div className="font-poppins bg-slate-950">
     <Intro/>
 
       <Header className="h-52"/>

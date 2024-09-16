@@ -1,5 +1,4 @@
 "use client";
-"use client";
 
 import { cn } from "@/lib/utils";
 import { motion, stagger, useAnimate, useInView } from "framer-motion";
@@ -28,8 +27,8 @@ export const TypewriterEffect = ({
         opacity: 1,
         width: "fit-content",
       }, {
-        duration: 0.3,
-        delay: stagger(0.1),
+        duration: 0.15,  // Increased speed (lowered duration)
+        delay: stagger(0.05),  // Increased speed (lowered delay)
         ease: "easeInOut",
       });
     }
@@ -40,7 +39,7 @@ export const TypewriterEffect = ({
       <motion.div ref={scope} className="inline">
         {wordsArray.map((word, idx) => {
           return (
-            <div key={`word-${idx}`} className="inline-block mr-2"> {/* Added margin-right for space */}
+            <div key={`word-${idx}`} className="inline-block mr-4"> {/* Increased margin between words */}
               {word.text.map((char, index) => (
                 <motion.span
                   initial={{}}
@@ -71,7 +70,7 @@ export const TypewriterEffect = ({
           opacity: 1,
         }}
         transition={{
-          duration: 0.8,
+          duration: 0.5,  // Increased cursor blink speed
           repeat: Infinity,
           repeatType: "reverse",
         }}
@@ -82,6 +81,7 @@ export const TypewriterEffect = ({
     </div>
   );
 };
+
 
 export const TypewriterEffectSmooth = ({
   words,
@@ -101,7 +101,7 @@ export const TypewriterEffectSmooth = ({
       <div>
         {wordsArray.map((word, idx) => {
           return (
-            <div key={`word-${idx}`} className="inline-block mr-2"> {/* Added margin-right for space */}
+            <div key={`word-${idx}`} className="inline-block mr-6"> {/* Increased margin between words */}
               {word.text.map((char, index) => (
                 <span
                   key={`char-${index}`}
@@ -127,9 +127,9 @@ export const TypewriterEffectSmooth = ({
           width: "fit-content",
         }}
         transition={{
-          duration: 2,
+          duration: 1,  // Increased speed (lowered duration)
           ease: "linear",
-          delay: 1,
+          delay: 0.5,  // Increased speed (lowered delay)
         }}>
         <div
           className="text-xs sm:text-base md:text-xl lg:text:3xl xl:text-5xl font-bold"
@@ -147,7 +147,7 @@ export const TypewriterEffectSmooth = ({
           opacity: 1,
         }}
         transition={{
-          duration: 0.8,
+          duration: 0.5,  // Increased cursor blink speed
           repeat: Infinity,
           repeatType: "reverse",
         }}

@@ -11,7 +11,7 @@ export function Projects() {
   return (
     <div className="w-full h-full py-20 bg-slate-950">
       <h2
-        className="max-w-7xl pl-4 mx-auto text-xl md:text-5xl font-bold text-white dark:text-neutral-200 font-sans">
+        className="max-w-7xl pl-4 mx-auto text-xl md:text-5xl font-bold text-white dark:text-neutral-200 ">
       </h2>
       <Carousel items={cards} />
     </div>
@@ -21,39 +21,41 @@ export function Projects() {
 const data = [
   {
     category: "",
-    title: "SGSITS NOTES",
+    title: "Sgsits Notes",
     src: "/gsnotes.png",
     link: "https://sgsitsnotes.vercel.app/"
   
   },
   {
-    category: "Productivity",
-    title: "Enhance your productivity.",
-    src: "/example.png",
-    
+    category: "",
+    title: "Crypto Wallet",
+    src: "/crypto.png",
+     link: "https://crypto-wallet-shrid.vercel.app/"
   },
   {
-    category: "Product",
-    title: "Launching the new Apple Vision Pro.",
-    src: "/example.png",
+    category: "",
+    title: "Zerodha Page",
+    src: "/zerodha.png",
     
+  },
+   {
+    category: "",
+    title: "Coming Soon",
+    src: "/gsnotes.png",
+    link: "https://sgsitsnotes.vercel.app/"
+  
   },
   {
-    category: "Product",
-    title: "Maps for your iPhone 15 Pro Max.",
-    src: "/example.png",
-    
+    category: "",
+    title: "Crypto Wallet",
+    src: "/crypto.png",
+     link: "https://crypto-wallet-shrid.vercel.app/"
   },
   {
-    category: "iOS",
-    title: "Photography just got better.",
-    src: "/example.png",
+    category: "",
+    title: "Zerodha Page",
+    src: "/zerodha.png",
     
   },
-  {
-    category: "Hiring",
-    title: "Hiring for a Staff Software Engineer",
-    src: "/example.png",
-    
-  },
+  
 ];

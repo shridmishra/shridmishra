@@ -73,13 +73,13 @@ export const Carousel = ({
           onScroll={checkScrollability}>
           <div
             className={cn(
-              "absolute right-0  z-[1000] h-auto  w-[5%] overflow-hidden bg-gradient-to-l"
+              "absolute right-0 z-[1000] h-auto w-[5%] overflow-hidden bg-gradient-to-l"
             )}></div>
 
           <div
             className={cn(
-              "flex flex-row justify-start gap-4 pt-52",
-              "max-w-7xl mx-auto"
+              "flex flex-row justify-start gap-8 pt-52 mx-8",
+              "max-w-7xl "
             )}>
             {items.map((item, index) => (
               <motion.div
@@ -165,7 +165,7 @@ export const Card = ({
     <>
       <AnimatePresence>
         {open && (
-          <div className="fixed inset-0 h-screen z-50 overflow-auto">
+          <div className="fixed inset-0 h-screen z-50 overflow-auto ">
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -177,21 +177,21 @@ export const Card = ({
               exit={{ opacity: 0 }}
               ref={containerRef}
               layoutId={layout ? `card-${card.title}` : undefined}
-              className="max-w-5xl mx-auto bg-white dark:bg-neutral-900 h-fit  z-[60] my-10 p-4 md:p-10 rounded-3xl font-sans relative">
+              className="max-w-xl mx-auto bg-white dark:bg-neutral-900 h-fit z-[60] my-10 p-4 md:p-10 rounded-3xl font-poppins relative">
               <button
-                className="sticky top-4 h-8 w-8 right-0 ml-auto bg-black dark:bg-white rounded-full flex items-center justify-center"
+                className="sticky top-4 h-8 w-8 right-5 ml-auto bg-black dark:bg-white rounded-full flex items-center justify-center"
                 onClick={handleClose}>
                 <IconX className="h-6 w-6 text-neutral-100 dark:text-neutral-900" />
               </button>
               <motion.p
-                layoutId={layout ? `category-${card.title}` : undefined}
-                className="text-base font-medium text-black dark:text-white">
-                {card.category}
-              </motion.p>
-              <motion.p
                 layoutId={layout ? `title-${card.title}` : undefined}
                 className="text-2xl md:text-5xl font-semibold text-neutral-700 mt-4 dark:text-white">
                 {card.title}
+              </motion.p>
+              <motion.p
+                layoutId={layout ? `category-${card.category}` : undefined}
+                className="text-base font-medium text-black dark:text-white mt-2">
+                {card.category}
               </motion.p>
               <div className="py-10">{card.content}</div>
             </motion.div>
@@ -205,16 +205,18 @@ export const Card = ({
         className="rounded-3xl bg-gray-100 dark:bg-neutral-900 h-80 w-56 md:h-[30rem] md:w-96 overflow-hidden flex flex-col items-start justify-start relative z-10 transition-transform duration-300 transform hover:scale-105">
         <div
           className="absolute h-full top-0 inset-x-0 bg-gradient-to-b from-black/50 via-transparent to-transparent z-30 pointer-events-none" />
-        <div className="relative z-40 p-8">
+        <div className="relative z-40 p-5 pt-2">
+        <motion.p
+  layoutId={layout ? `title-${card.title}` : undefined}
+  className="text-white text-xl md:text-2xl font-semibold max-w-xs text-left [text-wrap:balance] font-poppins mt-2 shadow-lg"
+  style={{ textShadow: "2px 2px 10px rgba(0, 0, 0, 0.7)" }}>
+  {card.title}
+</motion.p>
+
           <motion.p
             layoutId={layout ? `category-${card.category}` : undefined}
-            className="text-white text-sm md:text-base font-medium font-sans text-left">
+            className="text-white text-sm md:text-base font-medium font-poppins text-left mt-2">
             {card.category}
-          </motion.p>
-          <motion.p
-            layoutId={layout ? `title-${card.title}` : undefined}
-            className="text-white text-xl md:text-3xl font-semibold max-w-xs text-left [text-wrap:balance] font-sans mt-2">
-            {card.title}
           </motion.p>
         </div>
         <BlurImage

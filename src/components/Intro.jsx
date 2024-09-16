@@ -7,41 +7,41 @@ export const Intro = () => {
   const words = [
     {
       text: "I",
-      className: "font-bold text-7xl",
+      className: "font-bold text-4xl sm:text-6xl",
     },
     {
       text: "design",
-      className: "font-bold text-7xl",
+      className: "font-bold text-4xl sm:text-6xl",
     },
     {
       text: "and",
-      className: "font-bold text-7xl",
+      className: "font-bold text-4xl sm:text-6xl",
     },
     {
       text: "build",
-      className: "font-bold text-7xl",
+      className: "font-bold text-4xl sm:text-6xl",
     },
     {
       text: "full-stack",
-      className: "font-bold text-7xl text-blue-500", // Optional colored text
+      className: "font-bold text-4xl sm:text-6xl text-blue-500", // Optional colored text
     },
     {
       text: "web",
-      className: "font-bold text-7xl",
+      className: "font-bold text-4xl sm:text-6xl",
     },
     {
       text: "apps.",
-      className: "font-bold text-7xl",
-    },
+      className: "font-bold text-4xl  sm:text-6xl",
+    }
   ];
 
   return (
     <div className="flex flex-col items-start justify-center h-md pt-20 bg-slate-950 text-white font-poppins px-10">
       
       {/* Normal Text for "Hi, I'm Shrid Mishra" */}
-      <div className="text-left mb-4 flex flex-wrap text-slate-300">
-        <p className="text-4xl font-extralight mr-3">Hi, I'm</p>
-        <p className="text-4xl font-semibold">Shrid Mishra  👋 </p>
+      <div className="text-left mb-6 flex flex-wrap text-slate-300 mx-auto lg:mx-0">
+        <p className="text-2xl font-extralight mr-2 sm:text-4xl">Hi, I'm</p>
+        <p className="text-2xl font-semibold sm:text-4xl ">Shrid Mishra  👋 </p>
       </div>
 
       {/* Typewriter Effect for "I design and build full-stack web apps" */}
