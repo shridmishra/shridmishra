@@ -19,18 +19,19 @@ export function Projects() {
 }
 
 const data = [
-  {
-    category: "",
-    title: "Sgsits Notes",
-    src: "/gsnotes.png",
-    link: "https://sgsitsnotes.vercel.app/"
   
-  },
   {
     category: "",
     title: "Crypto Wallet",
     src: "/crypto.png",
      link: "https://crypto-wallet-shrid.vercel.app/"
+  },
+  {
+    category: "",
+    title: "GS Notes",
+    src: "/gsnotes.png",
+    link: "https://sgsitsnotes.vercel.app/"
+  
   },
   {
     category: "",
