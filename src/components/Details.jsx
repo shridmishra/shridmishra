@@ -10,8 +10,8 @@ export function Details() {
       content: (
         <div className="flex flex-wrap">
         <div className="text-white text-lg md:text-lg font-normal mb-8 font-poppins">
-          <strong>Purpose:</strong> A wallet for Crypto currencies <br />
-           <strong>Tech Stack: </strong>   Next.js, Tailwind CSS <br />
+          <strong>Purpose:</strong> A wallet for Crypto currencies. <br />
+           <strong>Tech Stack: </strong>   Next.js, Tailwind CSS. <br />
             <strong>Features: </strong> Generate mnemonics, add ETH & SOL wallets.
          
             </div>
@@ -32,8 +32,8 @@ export function Details() {
       content: (
         <div className="flex flex-wrap">
         <div className="text-white text-lg md:text-lg font-normal mb-8 font-poppins">
-          <strong>Purpose:</strong>  Note-sharing platform for college students <br />
-           <strong>Tech Stack: </strong>   Next.js, Tailwind CSS <br />
+          <strong>Purpose:</strong>  Note-sharing platform for college students. <br />
+           <strong>Tech Stack: </strong>   Next.js, Tailwind CSS. <br />
             <strong>Features: </strong> Upload, browse, and download notes.
          
             </div>
@@ -54,8 +54,8 @@ export function Details() {
       content: (
         <div className="flex flex-wrap">
         <div className="text-white text-lg md:text-lg font-normal mb-8 font-poppins">
-          <strong>Purpose:</strong> A basic landing page <br />
-           <strong>Tech Stack: </strong> HTML, CSS, JavaScript <br />
+          <strong>Purpose:</strong> A basic landing page. <br />
+           <strong>Tech Stack: </strong> HTML, CSS, JavaScript. <br />
             <strong>Features: </strong> Responsive in all views.
          
             </div>
