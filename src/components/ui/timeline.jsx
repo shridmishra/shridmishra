@@ -1,5 +1,4 @@
 "use client";
-import { useScroll, useTransform, motion } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 
 export const Timeline = ({ data }) => {
@@ -14,14 +13,6 @@ export const Timeline = ({ data }) => {
     }
   }, [data]); // Recalculate when data changes
 
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start 0%", "end 100%"], // Full tracking
-  });
-
-  const heightTransform = useTransform(scrollYProgress, [0, 1], [0, height]);
-  const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
-
   return (
     <div className="w-full bg-slate-950 font-poppins md:px-10" ref={containerRef}>
       <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10">
@@ -34,14 +25,9 @@ export const Timeline = ({ data }) => {
         {data && data.map((item, index) => (
           <div key={index} className="flex justify-start pt-10 md:pt-40 md:gap-10">
             <div className="sticky flex flex-col md:flex-row z-40 items-center top-40 self-start max-w-xs lg:max-w-sm md:w-full">
-              <motion.div
-                style={{
-                  opacity: opacityTransform,
-                  transform: heightTransform,  // Adjusts with scroll progress
-                }}
-                className="h-10 absolute left-3 md:left-3 w-10 rounded-full bg-black flex items-center justify-center">
+              <div className="h-10 absolute left-3 md:left-3 w-10 rounded-full bg-black flex items-center justify-center">
                 <div className="h-4 w-4 rounded-full bg-white border border-neutral-700 p-2" />
-              </motion.div>
+              </div>
               <h3 className="hidden md:block text-xl md:pl-20 md:text-4xl font-semibold text-white">
                 {item.title}
               </h3>
