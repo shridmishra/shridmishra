@@ -22,7 +22,7 @@ export function Footer() {
       </div>
 
       {/* Social Media Links */}
-      <div className="flex flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-8 mt-5">
+      <div className="flex  md:flex-row space-y-6 md:space-y-0 md:space-x-8 mt-5">
         {/* LinkedIn */}
         <LinkPreview
           url="https://www.linkedin.com/in/shridmishra/"
