@@ -11,7 +11,7 @@
 ## My Projects
 - 🌐 [**Anovas**](https://anovas.vercel.app/)
 - 🌐 [**GS Notes**](https://sgsitsnotes.vercel.app/)
-- 🌐 [**3SM Tech**](https://3smtechonrender.com)
+- 🌐 [**3SM Tech**](https://sm3tech.onrender.com)
 
 ---
 
@@ -32,10 +32,5 @@
 ![Your GitHub Stats](https://github-readme-stats.vercel.app/api?username=shridmishra&show_icons=true&theme=radical&count_private=true)
 ![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=shridmishra&theme=radical)
 ![Most Used Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=shridmishra&layout=compact&theme=radical)
-
----
-
-## Contributions
-![Contribution Graph](https://activity-graph.herokuapp.com/graph?username=shridmishra&theme=react-dark)
 
 ---
