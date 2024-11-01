@@ -1,24 +1,46 @@
+Here's an updated version of your README that highlights your freelance work and enhances the overall design. I've added some formatting and structure to make it visually appealing:
+
+---
+
 # Hello, I'm Shrid Mishra 👋
 
 ## About Me
-- 🌱 I’m currently learning **Web3**.
+- 🌟 I’m a **Freelancer** specializing in **Web3** development.
 - 💬 Ask me about **MERN stack development, Next.js, PostgreSQL, and Prisma**.
 - 📫 How to reach me: [shridmishra00@gmail.com](mailto:shridmishra00@gmail.com)
 
+---
+
 ## My Projects
-- [Anovas](https://anovas.vercel.app/)
-- [GS Notes](https://sgsitsnotes.vercel.app/)
+- 🌐 [**Anovas**](https://anovas.vercel.app/)
+- 🌐 [**GS Notes**](https://sgsitsnotes.vercel.app/)
+
+---
 
 ## My Skills
-- ![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=000000)
-- ![React](https://img.shields.io/badge/-React-61DAFB?style=flat-square&logo=react&logoColor=000000)
-- ![Node.js](https://img.shields.io/badge/-Node.js-339933?style=flat-square&logo=node.js&logoColor=ffffff)
-- ![Next.js](https://img.shields.io/badge/-Next.js-000000?style=flat-square&logo=next.js&logoColor=ffffff)
-- ![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=ffffff)
-- ![Prisma](https://img.shields.io/badge/-Prisma-2D3748?style=flat-square&logo=prisma&logoColor=white)
+<p align="left">
+  <img src="https://img.shields.io/badge/-JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=000000" alt="JavaScript" />
+  <img src="https://img.shields.io/badge/-React-61DAFB?style=flat-square&logo=react&logoColor=000000" alt="React" />
+  <img src="https://img.shields.io/badge/-Node.js-339933?style=flat-square&logo=node.js&logoColor=ffffff" alt="Node.js" />
+  <img src="https://img.shields.io/badge/-Next.js-000000?style=flat-square&logo=next.js&logoColor=ffffff" alt="Next.js" />
+  <img src="https://img.shields.io/badge/-PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=ffffff" alt="PostgreSQL" />
+  <img src="https://img.shields.io/badge/-Prisma-2D3748?style=flat-square&logo=prisma&logoColor=white" alt="Prisma" />
+</p>
+
+---
 
 ## GitHub Stats
-![Your GitHub Stats](https://github-readme-stats.vercel.app/api?username=shridmishra&show_icons=true&theme=radical)
+<p align="center">
+  ![Your GitHub Stats](https://github-readme-stats.vercel.app/api?username=shridmishra&show_icons=true&theme=radical)
+</p>
+
+---
 
 ## Top Languages
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=shridmishra&layout=compact&theme=radical)
+<p align="center">
+  ![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=shridmishra&layout=compact&theme=radical)
+</p>
+
+---
+
+Feel free to customize any part of this further or let me know if you need more adjustments!
