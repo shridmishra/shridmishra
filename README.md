@@ -27,15 +27,8 @@
 ---
 
 ## GitHub Stats
-<p align="center">
-  ![Your GitHub Stats](https://github-readme-stats.vercel.app/api?username=shridmishra&show_icons=true&theme=radical)
-</p>
-
----
+![Your GitHub Stats](https://github-readme-stats.vercel.app/api?username=shridmishra&show_icons=true&theme=radical)
 
 ## Top Languages
-<p align="center">
-  ![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=shridmishra&layout=compact&theme=radical)
-</p>
-
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=shridmishra&layout=compact&theme=radical) 
 ---
