@@ -1,13 +1,10 @@
-Here's an updated version of your README that highlights your freelance work and enhances the overall design. I've added some formatting and structure to make it visually appealing:
-
----
-
 # Hello, I'm Shrid Mishra 👋
 
 ## About Me
 - 🌟 I’m a **Freelancer** specializing in **Web3** development.
 - 💬 Ask me about **MERN stack development, Next.js, PostgreSQL, and Prisma**.
 - 📫 How to reach me: [shridmishra00@gmail.com](mailto:shridmishra00@gmail.com)
+- 🌐 Check out my portfolio: [shridmishra.vercel.app](https://shridmishra.vercel.app)
 
 ---
 
@@ -42,5 +39,3 @@ Here's an updated version of your README that highlights your freelance work and
 </p>
 
 ---
-
-Feel free to customize any part of this further or let me know if you need more adjustments!
