@@ -8,41 +8,41 @@ export const Intro = () => {
   const words = [
     {
       text: "I",
-      className: "font-bold text-4xl sm:text-6xl",
+      className: "font-bold text-xl lg:text-5xl",
     },
     {
       text: "design",
-      className: "font-bold text-4xl sm:text-6xl",
+      className: "font-bold text-xl lg:text-5xl",
     },
     {
       text: "&",
-      className: "font-bold text-4xl sm:text-6xl",
+      className: "font-bold text-xl lg:text-5xl",
     },
     {
       text: "build",
-      className: "font-bold text-4xl sm:text-6xl",
+      className: "font-bold text-xl lg:text-5xl",
     },
     {
       text: "full-stack",
-      className: "font-bold text-4xl sm:text-6xl text-blue-500", // Optional colored text
+      className: "font-bold text-xl lg:text-5xl text-blue-500", // Optional colored text
     },
     {
       text: "web",
-      className: "font-bold text-4xl sm:text-6xl",
+      className: "font-bold text-xl lg:text-5xl",
     },
     {
       text: "apps.",
-      className: "font-bold text-4xl  sm:text-6xl",
+      className: "font-bold text-xl lg:text-5xl",
     }
   ];
 
   return (
-    <div className="flex flex-col items-start justify-center  pt-10 bg-slate-950 text-white font-poppins px-8">
+    <div className="flex flex-col items-start justify-center  pt-10 bg-slate-950 text-white font-poppins px-8 mb-4">
       
      
       <div className="text-left mb-6 flex flex-wrap text-slate-300 mx-auto lg:mx-0">
-        <p className="text-2xl font-extralight mr-2 sm:text-4xl">Hi, I'm</p>
-        <p className="text-2xl font-semibold sm:text-4xl "> 
+        <p className="text-lg font-extralight mr-2 lg:text-4xl">Hi, I'm</p>
+        <p className="text-lg font-semibold lg:text-4xl "> 
           <LinkPreview
           url="https://www.linkedin.com/in/shridmishra/"
           className="font-light bg-clip-text text-transparent bg-slate-200">
