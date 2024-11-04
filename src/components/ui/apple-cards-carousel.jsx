@@ -78,7 +78,7 @@ export const Carousel = ({
 
           <div
             className={cn(
-              "flex flex-row justify-start gap-8 pt-52 md:pt-96 mx-8",
+              "flex flex-row justify-start gap-8  mx-8",
               "max-w-7xl "
             )}>
             {items.map((item, index) => (

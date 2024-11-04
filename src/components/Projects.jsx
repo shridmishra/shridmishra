@@ -9,7 +9,7 @@ export function Projects() {
   ));
 
   return (
-    <div className="w-full h-full py-20 bg-slate-950">
+    <div className="w-full h-full bg-slate-950">
       <h2
         className="max-w-7xl pl-4 mx-auto text-xl md:text-5xl font-bold text-white dark:text-neutral-200 ">
       </h2>
@@ -20,12 +20,7 @@ export function Projects() {
 
 const data = [
   
-  {
-    category: "",
-    title: "Crypto Wallet",
-    src: "/crypto.png",
-     link: "https://crypto-wallet-shrid.vercel.app/"
-  },
+
   {
     category: "",
     title: "GS Notes",
@@ -35,16 +30,16 @@ const data = [
   },
   {
     category: "",
-    title: "Zerodha Page",
-    src: "/zerodha.png",
-    
-  },
-   {
-    category: "",
-    title: "Coming Soon",
-    src: "/gsnotes.png",
-    link: "https://sgsitsnotes.vercel.app/"
+    title: "Anovas",
+    src: "/anovas.png",
+    link: "https://anovas.vercel.app/"
   
+  },
+  {
+    category: "",
+    title: "SM3 Tech",
+    src: "/sm3tech.png",
+     link: "https://sm3tech.onrender.com/"
   },
   {
     category: "",
@@ -58,5 +53,6 @@ const data = [
     src: "/zerodha.png",
     
   },
+ 
   
 ];

@@ -15,7 +15,7 @@ export const Intro = () => {
       className: "font-bold text-4xl sm:text-6xl",
     },
     {
-      text: "and",
+      text: "&",
       className: "font-bold text-4xl sm:text-6xl",
     },
     {
@@ -37,15 +37,15 @@ export const Intro = () => {
   ];
 
   return (
-    <div className="flex flex-col items-start justify-center h-md pt-20 bg-slate-950 text-white font-poppins px-10">
+    <div className="flex flex-col items-start justify-center  pt-10 bg-slate-950 text-white font-poppins px-8">
       
-      {/* Normal Text for "Hi, I'm Shrid Mishra" */}
+     
       <div className="text-left mb-6 flex flex-wrap text-slate-300 mx-auto lg:mx-0">
         <p className="text-2xl font-extralight mr-2 sm:text-4xl">Hi, I'm</p>
         <p className="text-2xl font-semibold sm:text-4xl "> 
           <LinkPreview
           url="https://www.linkedin.com/in/shridmishra/"
-          className="font-bold bg-clip-text text-transparent bg-slate-200">
+          className="font-light bg-clip-text text-transparent bg-slate-200">
           Shrid Mishra
         </LinkPreview> 👋 </p>
       </div>
