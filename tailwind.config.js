@@ -19,6 +19,9 @@ module.exports = {
     extend: {
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],
+        chakra: ['Chakra Petch', 'sans-serif'],
+        handwriting: ['"Dancing Script"', 'cursive'],
+        romanesco: ['Romanesco', 'cursive'],
         },
       colors: {
         border: "hsl(var(--border))",
