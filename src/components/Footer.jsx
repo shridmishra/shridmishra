@@ -22,14 +22,14 @@ export function Footer() {
       </div>
 
       {/* Social Media Links */}
-      <div className="flex  md:flex-row space-y-6 md:space-y-0 md:space-x-8 mt-5">
+      <div className="flex  md:flex-row space-y-6 md:space-y-0 md:space-x-8 mt-5 ">
         {/* LinkedIn */}
         <LinkPreview
           url="https://www.linkedin.com/in/shridmishra/"
           className="font-bold text-white hover:scale-110 transition-transform duration-300"
         >
           <div className="p-3 rounded-full shadow-lg">
-            <FaLinkedin size={40} className="text-white" /> {/* White icon */}
+            <FaLinkedin className="text-white sm:w-5 sm:h-5 md:w-10 md:h-10" /> {/* Responsive size */}
           </div>
           <span className="sr-only">LinkedIn</span>
         </LinkPreview>
@@ -40,7 +40,7 @@ export function Footer() {
           className="font-bold text-white hover:scale-110 transition-transform duration-300"
         >
           <div className="p-3 rounded-full shadow-lg">
-            <FaInstagram size={40} className="text-white" /> {/* White icon */}
+            <FaInstagram className="text-white sm:w-5 sm:h-5 md:w-10 md:h-10" /> {/* Responsive size */}
           </div>
           <span className="sr-only">Instagram</span>
         </LinkPreview>
@@ -51,7 +51,7 @@ export function Footer() {
           className="font-bold text-white hover:scale-110 transition-transform duration-300"
         >
           <div className="p-3 rounded-full shadow-lg">
-            <FaTwitter size={40} className="text-white" /> {/* White icon */}
+            <FaTwitter className="text-white sm:w-5 sm:h-5 md:w-10 md:h-10" /> {/* Responsive size */}
           </div>
           <span className="sr-only">Twitter</span>
         </LinkPreview>
@@ -62,7 +62,7 @@ export function Footer() {
           className="font-bold text-white hover:scale-110 transition-transform duration-300"
         >
           <div className="p-3 rounded-full shadow-lg">
-            <FaGithub size={40} className="text-white" /> {/* White icon */}
+            <FaGithub className="text-white sm:w-5 sm:h-5 md:w-10 md:h-10" /> {/* Responsive size */}
           </div>
           <span className="sr-only">GitHub</span>
         </LinkPreview>

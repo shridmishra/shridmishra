@@ -93,10 +93,10 @@ const Notification = ({ name, description, icon, color }) => {
           <div className="text-2xl"  style={{ color: color }}>{icon}</div>
         </div>
         <div className="flex flex-col overflow-hidden">
-          <figcaption className="text-lg font-semibold text-gray-200">
+          <figcaption className=" text-sm lg:text-lg font-semibold text-gray-200">
             {name}
           </figcaption>
-          <p className="text-sm font-light text-gray-300">{description}</p>
+          <p className=" text-xs lg:text-sm font-light text-gray-300">{description}</p>
         </div>
       </div>
     </figure>
