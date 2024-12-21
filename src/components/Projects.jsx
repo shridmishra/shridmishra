@@ -24,15 +24,15 @@ const data = [
   {
     category: "",
     title: "GS Notes",
-    src: "/gsnotes.png",
+    src: "/gs2.png",
     link: "https://sgsitsnotes.vercel.app/"
   
   },
   {
     category: "",
-    title: "Anovas",
-    src: "/anovas.png",
-    link: "https://anovas.vercel.app/"
+    title: "Saas Page",
+    src: "/landing-page.png",
+    link: "https://landing-page-shrid.vercel.app/"
   
   },
   {
@@ -40,6 +40,13 @@ const data = [
     title: "SM3 Tech",
     src: "/sm3tech.png",
      link: "https://sm3tech.onrender.com/"
+  },
+  {
+    category: "",
+    title: "Anovas",
+    src: "/anovas.png",
+    link: "https://anovas.vercel.app/"
+  
   },
   {
     category: "",
