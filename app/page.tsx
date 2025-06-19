@@ -1,103 +1,131 @@
-import Image from "next/image";
+import React from 'react';
+import { Twitter, Github, ExternalLink, FileText } from 'lucide-react';
+import Image from 'next/image';
 
-export default function Home() {
+const PortfolioPage = () => {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
+    <div
+      className="min-h-screen relative overflow-hidden font-sans antialiased"
+      style={{
+        background: 'var(--background)',
+        color: 'var(--foreground)',
+      }}
+    >
+      {/* Subtle Grid Background */}
+      <div className=" inset-0 pointer-events-none z-0 opacity-100 hidden sm:block fixed">
+        <div
+          className="w-full h-full"
+          style={{
+            backgroundImage: `
+              linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px)
+            `,
+            backgroundSize: '40px 40px',
+          }}
         />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+      </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      <div className="relative z-10 max-w-xl sm:max-w-4xl mx-auto lg:mx-80 mt-6 px-4 sm:px-10 py-12 sm:py-16 mb-4">
+        {/* Profile Section */}
+        <section className="relative mb-16 sm:mb-24">
+          {/* Image & Icons Wrapper */}
+          <div className="flex items-start justify-between w-full mb-4 lg:flex-row sm:flex-col  sm:mb-6">
+            {/* Profile Image */}
+            <div className="w-24 h-24 sm:w-36 sm:h-36 rounded-3xl overflow-hidden border border-[var(--card-border)] shadow-lg">
+              <Image
+                src="/assets/me.jpg"
+                width={144}
+                height={144}
+                alt="Shrid Profile"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            {/* Icons */}
+            <div className="flex items-center  gap-3 ">
+              {[
+                { Icon: Twitter, label: 'Twitter', href: 'https://twitter.com/yourprofile' },
+                { Icon: Github, label: 'GitHub', href: 'https://github.com/yourprofile' },
+                { Icon: ExternalLink, label: 'Portfolio', href: 'https://yourportfolio.com' },
+              ].map(({ Icon, label, href }) => (
+                <a
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-2 sm:p-3 rounded-full hover:bg-[var(--hover-background)] transition-transform transform hover:scale-105"
+                  aria-label={label}
+                >
+                  <Icon className="w-5 h-5 sm:w-6 sm:h-6 text-[var(--text-primary)] hover:text-[var(--text-primary)] transition-colors" />
+                </a>
+              ))}
+            </div>
+          </div>
+
+          {/* Name and Title */}
+          <h1 className="text-3xl sm:text-4xl font-medium mb-1 mt-6 tracking-tight text-[var(--text-primary)]">
+            Hi, I&apos;m Shrid
+          </h1>
+          <p className="text-[var(--text-secondary)] text-base sm:text-lg mb-4 sm:mb-6 ">
+            21, Mumbai | Full Stack Engineer
+          </p>
+
+          {/* Bio */}
+          <p className="text-[var(--text-secondary)] max-w-full sm:max-w-2xl leading-relaxed text-base sm:text-lg">
+            I&apos;m a Full Stack Blockchain Developer crafting cutting-edge dApps and DeFi solutions. From writing secure smart contracts to building intuitive Web3 interfaces, I turn complex blockchain concepts into user-friendly experiences.
+          </p>
+        </section>
+
+        {/* Divider */}
+        <hr className="border-t border-[var(--card-border)] opacity-30 mb-10 sm:mb-2" />
+
+        {/* Experience Section */}
+        <section className="mx-auto">
+          <h2 className="text-2xl sm:text-3xl font-medium text-blue-400 mb-3 sm:mb-4">Experience</h2>
+          <p className="text-[var(--text-muted)] mb-6 sm:mb-8 text-base sm:text-lg max-w-full sm:max-w-2xl">
+            A snapshot of my professional journey, highlighting key roles and achievements in blockchain and full-stack development.
+          </p>
+
+          {/* Experience Card */}
+          <div className="bg-[var(--card-background)] backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-[var(--card-border)] shadow-md">
+            <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-6">
+              <div className="p-3 sm:p-4 bg-blue-500/10 rounded-xl border border-blue-500/20 flex-shrink-0">
+                <FileText className="w-6 h-6 sm:w-8 sm:h-8 text-blue-400" />
+              </div>
+
+              <div className="flex-1 min-w-0">
+                <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-3 mb-1 sm:mb-2">
+                  <h3 className="text-xl sm:text-2xl font-semibold text-[var(--text-primary)]">
+                    Full-Stack Blockchain Engineer
+                  </h3>
+                  <span className="px-3 py-1 bg-gray-700/30 text-gray-300 text-xs sm:text-sm rounded-lg font-medium border border-gray-600/20">
+                    Wildcard
+                  </span>
+                </div>
+
+                <p className="text-blue-400 text-xs sm:text-sm mb-2 sm:mb-3 font-medium">June 2024 – Present</p>
+
+                <p className="text-[var(--text-muted)] mb-4 sm:mb-6 text-base sm:text-lg leading-relaxed">
+                  Leading development of smart wallet infrastructure, on-chain permission modules, and intuitive dApp frontends.
+                </p>
+
+                {/* Tech Stack */}
+                <div className="flex flex-wrap gap-2">
+                  {['Rust', 'Solana', 'EVM', 'Next.js'].map((tech) => (
+                    <span
+                      key={tech}
+                      className="px-2 sm:px-3 py-1 bg-gray-700/20 text-xs sm:text-sm rounded-full border border-gray-600/20 font-medium"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
     </div>
   );
-}
+};
+
+export default PortfolioPage;
