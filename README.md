@@ -19,14 +19,14 @@
 
 ### 📁 Projects
 
-#### 🏥 [MediChain](https://github.com/shridmishra/medichain)
+#### 🏥 [MediChain](https://github.com/shridmishra/medichain)  
 > Solana-based health data sharing with PDA permissions & doctor dashboard
 
-#### 🔐 [Native Staking Contract (Solana)](https://github.com/shridmishra/solana-contracts)
+#### 🔐 [Native Staking Contract (Solana)](https://github.com/shridmishra/solana-contracts)  
 > Stake/Unstake/Claim SPL tokens — custom PDA logic + full test suite
 
-#### 💸 [Portfolio](https://shridmishra.vercel.app)
-> More projects here
+#### 💸 [Portfolio](https://shridmishra.vercel.app)  
+> More projects & experiments
 
 ---
 
@@ -51,15 +51,16 @@
 
 ---
 
-<p align="center">
-  <img src="https://streak-stats.demolab.com?user=shridmishra&theme=default&hide_border=true" width="48%"/>
-  ## GitHub Stats
- ![Most Used Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=shridmishra&layout=compact&theme=radical)
+### 📊 GitHub Stats
 
----
+<p align="center">
+  <img src="https://streak-stats.demolab.com?user=shridmishra&theme=default&hide_border=true" width="48%" />
+ 
+</p>
+<p align="center">
+ <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=shridmishra&layout=compact&theme=default&hide_border=true" width="48%" /> 
 </p>
 
 ---
 
-<!-- footer quote -->
 <pre align="center">building smart contracts. writing clean code. testing everything.</pre>
