@@ -53,6 +53,10 @@
 
 <p align="center">
   <img src="https://streak-stats.demolab.com?user=shridmishra&theme=default&hide_border=true" width="48%"/>
+  ## GitHub Stats
+ ![Most Used Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=shridmishra&layout=compact&theme=radical)
+
+---
 </p>
 
 ---
