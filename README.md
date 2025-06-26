@@ -1,40 +1,61 @@
-# Hello, I'm Shrid Mishra 👋
+<h1 align="center">Shrid Mishra</h1>
+<p align="center">Full-Stack Blockchain Developer | Solana • Ethereum • Web3</p>
 
-## About Me
-- 🌟 I’m a **Freelancer** specializing in **Web Development**.
-- 💬 Ask me about **MERN stack development, Next.js, PostgreSQL, and Prisma**.
-- 📫 How to reach me: [shridmishra00@gmail.com](mailto:shridmishra00@gmail.com)
-- 🌐 Check out my portfolio: [shridmishra.vercel.app](https://shridmishra.vercel.app)
-
----
-
-## My Projects
-- 🌐 [**Medichain**](https://medichain-nine.vercel.app/)
-- 🌐 [**PortFolio**](https://shridmishra.vercel.app/)
-- 🌐 [**3SM Tech**](https://sm3tech.onrender.com)
-- 🌐 [**Anovas**](https://anovas.vercel.app/)
-- 🌐 [**GS Notes**](https://sgsitsnotes.vercel.app/)
-- 🌐 [**Saas Page**](https://landing-page-shrid.vercel.app/)
-
-
----
-
-## My Skills
-<p align="left">
-  <img src="https://img.shields.io/badge/-JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=000000" alt="JavaScript" />
-  <img src="https://img.shields.io/badge/-React-61DAFB?style=flat-square&logo=react&logoColor=000000" alt="React" />
-  <img src="https://img.shields.io/badge/-Node.js-339933?style=flat-square&logo=node.js&logoColor=ffffff" alt="Node.js" />
-  <img src="https://img.shields.io/badge/-TypeScript-007ACC?style=flat-square&logo=typescript&logoColor=ffffff" alt="TypeScript" />
-  <img src="https://img.shields.io/badge/-Next.js-000000?style=flat-square&logo=next.js&logoColor=ffffff" alt="Next.js" />
-  <img src="https://img.shields.io/badge/-PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=ffffff" alt="PostgreSQL" />
-  <img src="https://img.shields.io/badge/-Prisma-2D3748?style=flat-square&logo=prisma&logoColor=white" alt="Prisma" />
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=rust,solidity,ts,nextjs,react,tailwind,prisma,postgres,mongodb,docker,vercel,git,githubactions" />
 </p>
 
 ---
 
-## GitHub Stats
-![Your GitHub Stats](https://github-readme-stats.vercel.app/api?username=shridmishra&show_icons=true&theme=radical&count_private=true)
-![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=shridmishra&theme=radical)
-![Most Used Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=shridmishra&layout=compact&theme=radical)
+### 🧠 Tech Focus
+
+- Solana (Rust, Native + Anchor), Ethereum (Solidity, Foundry)
+- Full-stack apps
+- Monorepos with Turborepo, shared packages, modular infra
+- SPL token systems, PDA-based storage
+- Secure contract testing with Solana Program Test & Forge
 
 ---
+
+### 📁 Projects
+
+#### 🏥 [MediChain](https://github.com/shridmishra/medichain)
+> Solana-based health data sharing with PDA permissions & doctor dashboard
+
+#### 🔐 [Native Staking Contract (Solana)](https://github.com/shridmishra/solana-contracts)
+> Stake/Unstake/Claim SPL tokens — custom PDA logic + full test suite
+
+#### 💸 [Portfolio](https://shridmishra.vercel.app)
+> More projects here
+
+---
+
+### 🧪 Currently Exploring
+
+<p>
+  <img src="https://img.shields.io/badge/Anchor-CPI-lightgray?logo=solana&logoColor=black" />
+  <img src="https://img.shields.io/badge/Foundry-Test%20Coverage-blue?logo=ethereum" />
+  <img src="https://img.shields.io/badge/Solana%20Security-Anchorless-lightgrey?logo=solana" />
+  <img src="https://img.shields.io/badge/Multisig-Wallets-informational?logo=lock" />
+</p>
+
+---
+
+### 📬 Connect
+
+<p>
+  <a href="https://x.com/shridmishra"><img src="https://img.shields.io/badge/X-@shridmishra-black?style=flat&logo=twitter" /></a>
+  <a href="https://linkedin.com/in/shridmishra"><img src="https://img.shields.io/badge/LinkedIn-shridmishra-blue?style=flat&logo=linkedin" /></a>
+  <a href="mailto:shridmishra00@gmail.com"><img src="https://img.shields.io/badge/Email-shridmishra00@gmail.com-red?style=flat&logo=gmail" /></a>
+</p>
+
+---
+
+<p align="center">
+  <img src="https://streak-stats.demolab.com?user=shridmishra&theme=default&hide_border=true" width="48%"/>
+</p>
+
+---
+
+<!-- footer quote -->
+<pre align="center">building smart contracts. writing clean code. testing everything.</pre>
