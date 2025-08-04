@@ -4,9 +4,9 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { useTheme } from "next-themes";
 import { Sun, Moon } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { FloatingDock } from "@/components/ui/floating-dock";
-import { ExperienceCard } from "@/components/ExperienceCard";
+import { Button } from "@/src/components/ui/button";
+import { FloatingDock } from "@/src/components/ui/floating-dock";
+import { ExperienceCard } from "@/src/components/ExperienceCard";
 import {
   IconBrandGithub,
   IconBrandX,

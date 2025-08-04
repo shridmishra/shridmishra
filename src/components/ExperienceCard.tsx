@@ -7,7 +7,7 @@ import {
   IconBrandLinkedin,
   IconBrandTwitter,
 } from "@tabler/icons-react";
-import { Badge } from "@/components/ui/badge";
+import { Badge } from "@/src/components/ui/badge";
 import { FileText } from "lucide-react";
 
 interface Experience {
