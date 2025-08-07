@@ -1,21 +1,7 @@
 "use client";
 
-import { ThemeProvider as NextThemesProvider } from "next-themes";
-import type { ReactNode } from "react";
+import { ThemeProvider as NextThemesProvider, type ThemeProviderProps } from "next-themes";
 
-interface DarkModeProviderProps {
-  children: ReactNode;
-}
-
-export default function DarkModeProvider({ children }: DarkModeProviderProps) {
-  return (
-    <NextThemesProvider
-      attribute="class"
-      defaultTheme="system"
-      enableSystem
-      disableTransitionOnChange
-    >
-      {children}
-    </NextThemesProvider>
-  );
+export default function DarkModeProvider(props: ThemeProviderProps) {
+  return <NextThemesProvider {...props} />;
 }

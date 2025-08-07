@@ -1,82 +1,68 @@
 import React from "react";
+import Link from "next/link";
 import { ProjectCard } from "@/src/components/ui/project-card";
+import { projects } from "../utils/constants";
 
 export const ProjectsSection = () => {
-  const projects = [
-    {
-      title: "DeFi Trading Platform",
-      description: "A comprehensive decentralized trading platform with automated market making, yield farming, and cross-chain asset management.",
-      tech: ["React", "Solidity", "Web3.js", "Node.js"],
-      status: "Live",
-      year: "2024"
-    },
-    {
-      title: "NFT Marketplace",
-      description: "Full-featured NFT marketplace with minting, trading, and royalty distribution. Built with gas-optimized smart contracts.",
-      tech: ["Next.js", "Ethereum", "IPFS", "TypeScript"],
-      status: "Live",
-      year: "2023"
-    },
-    {
-      title: "DAO Governance Tool",
-      description: "Democratic governance platform enabling token holders to propose, vote, and execute organizational decisions on-chain.",
-      tech: ["React", "Solidity", "The Graph", "Hardhat"],
-      status: "In Development",
-      year: "2024"
-    },
-    {
-      title: "Cross-Chain Bridge",
-      description: "Secure asset bridge facilitating seamless transfers between Ethereum, Polygon, and BSC with minimal fees.",
-      tech: ["Vue.js", "Solidity", "Chainlink", "Express"],
-      status: "Live",
-      year: "2023"
-    }
-  ];
-
   return (
     <section className="space-y-12">
       {/* Section Header */}
-      <div className="space-y-4">
-        <div className="flex items-center gap-4">
-          <h2 className="text-3xl sm:text-4xl font-semibold text-foreground">
-            Featured Projects
-          </h2>
-          <div className="flex-1 h-px bg-gradient-to-r from-border to-transparent"></div>
-        </div>
-        <p className="text-muted-foreground text-lg sm:text-xl max-w-3xl leading-relaxed">
-          A curated selection of my recent work, showcasing innovative blockchain solutions and full-stack applications that push the boundaries of Web3 development.
-        </p>
-      </div>
+      <header className="space-y-3">
+        <h2 className="text-2xl sm:text-3xl font-medium text-primary text-center">
+          Proof Of Work
+        </h2>
+        {/* <p className="text-secondary text-base sm:text-lg max-w-2xl leading-relaxed">
+          Recent projects spanning blockchain infrastructure, DeFi protocols, and full-stack applications.
+          Each built with a focus on security, scalability, and user experience.
+        </p> */}
+      </header>
 
       {/* Projects Grid */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
         {projects.map((project, index) => (
           <ProjectCard
-            key={index}
+            key={project.title}
             title={project.title}
             description={project.description}
             tech={project.tech}
-            status={project.status}
-            year={project.year}
+            // status={project.status}
             index={index}
+            link={project.link}
+            source={project.code}
           />
         ))}
       </div>
 
-      {/* View More Section */}
-      <div className="text-center pt-8">
-        <button className="group inline-flex items-center gap-2 px-6 py-3 bg-primary/5 hover:bg-primary/10 text-primary border border-primary/20 hover:border-primary/40 rounded-xl transition-all duration-300 font-medium">
-          <span>View All Projects</span>
-          <svg 
-            className="w-4 h-4 group-hover:translate-x-1 transition-transform" 
-            fill="none" 
-            stroke="currentColor" 
-            viewBox="0 0 24 24"
+      {/* Additional Work Link */}
+      <footer className="pt-4 border-t border-border/30 mb-20 ">
+
+
+        <div className="text-sm font-medium text-secondary mb-1">
+          <Link
+            href="https://github.com/shridmishra"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group inline-flex items-center gap-2 text-sm font-medium text-primary hover:text-primary/70 transition-colors"
           >
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-          </svg>
-        </button>
-      </div>
+            <span>More Projects</span>
+            <svg
+              className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </Link>
+        </div>
+        <p className="text-xs text-muted">
+          View additional work and open source contributions
+        </p>
+
+
+
+
+      </footer>
     </section>
   );
 };
