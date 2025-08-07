@@ -1,62 +1,55 @@
+/* 1. Import custom font and Tailwind */
+@import url("https://db.onlinewebfonts.com/c/102353a74d2e0700af3e11ef8a917b26?family=Bricolage+Grotesque");
 @import "tailwindcss";
 
-/* ✨ Fix the dark variant so "dark:" classes respond to <html class="dark"> */
-@custom-variant dark (&:where(.dark, .dark *));
-
-/* ————— Light mode token setup ————— */
-:root {
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.6 0.18 250);
-  --primary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --border: oklch(0.922 0 0);
-  --text-primary: oklch(0.1 0 0);
-  --text-muted: oklch(0.5 0 0);
-  /* …etc rest of your light tokens… */
+/* 2. Define custom font and base font size */
+@theme {
+  --font-sans: "Bricolage Grotesque", sans-serif;
 }
 
-/* ————— Dark mode token overrides — stripped of duplicate code ————— */
+/* 3. Set global styles */
+@layer base {
+  html,
+  body {
+    font-family: var(--font-sans);
+
+    @apply bg-background text-foreground;
+  }
+
+  * {
+    @apply border-border;
+  }
+}
+
+@variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+@theme {
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+  --primary: oklch(0.6 0.18 250);
+  --muted: oklch(0.97 0 0);
+  --border: oklch(0.922 0 0);
+  --text-primary: oklch(0.1 0 0);
+}
+
+/* 6. Override tokens for dark mode */
 @layer theme {
   .dark {
     --background: oklch(0.145 0 0);
     --foreground: oklch(0.985 0 0);
-    --card: oklch(0.205 0 0);
-    --card-foreground: oklch(0.985 0 0);
     --primary: oklch(0.75 0.2 250);
-    --primary-foreground: oklch(0.985 0 0);
     --muted: oklch(0.269 0 0);
-    --muted-foreground: oklch(0.708 0 0);
     --border: oklch(1 0 0 / 10%);
     --text-primary: oklch(0.985 0 0);
-    --text-muted: oklch(0.6 0 0);
-    /* …etc rest of your dark tokens… */
   }
 }
 
-/* ————— Map theme tokens to Tailwind variables ————— */
+/* 7. Map CSS custom properties for Tailwind use */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-card: var(--card);
   --color-primary: var(--primary);
   --color-muted: var(--muted);
   --color-border: var(--border);
   --color-text-primary: var(--text-primary);
-  --color-muted-foreground: var(--muted-foreground);
-  /* …map all tokens you reference in components… */
-}
-
-/* ————— Base styles layer ————— */
-@layer base {
-  * {
-    @apply border-border outline-ring/50;
-  }
-
-  body {
-    @apply bg-background text-foreground;
-  }
 }
