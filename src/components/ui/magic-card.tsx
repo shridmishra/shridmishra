@@ -2,22 +2,24 @@
 
 import React, { useCallback, useEffect } from "react";
 import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
-
 import { cn } from "@/src/lib/utils";
 
-export interface MagicCardProps extends React.HTMLAttributes<HTMLDivElement> {
+export interface MagicCardProps
+  extends React.HTMLAttributes<HTMLDivElement> {
   gradientSize?: number;
   gradientColor?: string;
   gradientOpacity?: number;
 }
 
-export function MagicCard({
+
+export const MagicCard: React.FC<MagicCardProps> = ({
   children,
   className,
   gradientSize = 200,
-  gradientColor = "#262626",
+  gradientColor = "rgba(38, 38, 38, 0.6)",
   gradientOpacity = 0.8,
-}: MagicCardProps) {
+  ...props
+}) => {
   const mouseX = useMotionValue(-gradientSize);
   const mouseY = useMotionValue(-gradientSize);
 
@@ -27,7 +29,7 @@ export function MagicCard({
       mouseX.set(e.clientX - left);
       mouseY.set(e.clientY - top);
     },
-    [mouseX, mouseY],
+    [mouseX, mouseY]
   );
 
   const handleMouseLeave = useCallback(() => {
@@ -38,19 +40,25 @@ export function MagicCard({
   useEffect(() => {
     mouseX.set(-gradientSize);
     mouseY.set(-gradientSize);
-  }, [mouseX, mouseY, gradientSize]);
+  }, [gradientSize, mouseX, mouseY]);
 
   return (
     <div
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       className={cn(
-        "group relative flex size-full overflow-hidden rounded-xl bg-neutral-100 dark:bg-neutral-900 border text-black dark:text-white",
-        className,
+        "group relative flex size-full flex-col overflow-hidden rounded-xl border border-border/50 bg-card text-foreground shadow-sm transition-all duration-300 hover:border-border/40 hover:shadow-lg",
+        "min-h-[80px]", 
+        className
       )}
+      {...props}
     >
-      <div className="relative z-10">{children}</div>
+      {/* Foreground Content */}
+      <div className="relative z-10 flex flex-col flex-1">{children}</div>
+
+      {/* Gradient Hover Effect */}
       <motion.div
+        aria-hidden="true"
         className="pointer-events-none absolute -inset-px rounded-xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
         style={{
           background: useMotionTemplate`
@@ -61,4 +69,4 @@ export function MagicCard({
       />
     </div>
   );
-}
+};

@@ -15,28 +15,28 @@ const Dock = () => {
         {
             title: "Home",
             icon: (
-                <IconHome className="h-full w-full text-muted-foreground hover:text-primary transition-colors" />
+                <IconHome className="h-full w-full text-foreground hover:text-primary transition-colors" />
             ),
             href: "/",
         },
         {
             title: "Projects",
             icon: (
-                <IconTerminal2 className="h-full w-full text-muted-foreground hover:text-primary transition-colors" />
+                <IconTerminal2 className="h-full w-full text-foreground hover:text-primary transition-colors" />
             ),
             href: "/projects",
         },
         {
             title: "X",
             icon: (
-                <IconBrandX className="h-full w-full text-muted-foreground hover:text-primary transition-colors" />
+                <IconBrandX className="h-full w-full text-foreground hover:text-primary transition-colors" />
             ),
             href: "https://x.com/shridmishra",
         },
         {
             title: "GitHub",
             icon: (
-                <IconBrandGithub className="h-full w-full text-muted-foreground hover:text-primary transition-colors" />
+                <IconBrandGithub className="h-full w-full text-foreground hover:text-primary transition-colors" />
             ),
             href: "https://github.com/shridmishra",
         },

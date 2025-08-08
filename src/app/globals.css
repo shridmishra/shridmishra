@@ -42,24 +42,25 @@
   --foreground: oklch(0.09 0 0);
   --card: oklch(0.998 0 0);
   --card-foreground: oklch(0.09 0 0);
-  
+
   /* Interactive colors */
   --primary: oklch(0.6 0.18 250);
   --primary-foreground: oklch(0.998 0 0);
   --secondary: oklch(0.96 0 0);
   --secondary-foreground: oklch(0.09 0 0);
-  
+
   /* Utility colors */
   --muted: oklch(0.96 0 0);
   --muted-foreground: oklch(0.45 0 0);
   --accent: oklch(0.96 0 0);
   --accent-foreground: oklch(0.09 0 0);
-  
+
   /* Borders and separators */
   --border: oklch(0.91 0 0);
+  --background-border: oklch(0.922 0 0);
   --input: oklch(0.91 0 0);
   --ring: oklch(0.6 0.18 250);
-  
+
   /* Status colors */
   --destructive: oklch(0.628 0.258 29.234);
   --destructive-foreground: oklch(0.998 0 0);
@@ -67,7 +68,7 @@
   --success-foreground: oklch(0.998 0 0);
   --warning: oklch(0.8 0.15 85);
   --warning-foreground: oklch(0.09 0 0);
-  
+
   /* Custom semantic colors for portfolio */
   --text-primary: oklch(0.09 0 0);
   --text-secondary: oklch(0.35 0 0);
@@ -84,24 +85,25 @@
     --foreground: oklch(0.98 0 0);
     --card: oklch(0.09 0 0);
     --card-foreground: oklch(0.98 0 0);
-    
+
     /* Interactive colors */
     --primary: oklch(0.75 0.2 250);
     --primary-foreground: oklch(0.09 0 0);
     --secondary: oklch(0.15 0 0);
     --secondary-foreground: oklch(0.98 0 0);
-    
+
     /* Utility colors */
     --muted: oklch(0.15 0 0);
     --muted-foreground: oklch(0.65 0 0);
     --accent: oklch(0.15 0 0);
     --accent-foreground: oklch(0.98 0 0);
-    
+
     /* Borders and separators */
     --border: oklch(0.28 0 0);
+    --background-border: oklch(1 0 0 / 40%);
     --input: oklch(0.28 0 0);
     --ring: oklch(0.75 0.2 250);
-    
+
     /* Status colors */
     --destructive: oklch(0.7 0.25 29.234);
     --destructive-foreground: oklch(0.09 0 0);
@@ -109,7 +111,7 @@
     --success-foreground: oklch(0.09 0 0);
     --warning: oklch(0.75 0.15 85);
     --warning-foreground: oklch(0.09 0 0);
-    
+
     /* Custom semantic colors for portfolio - dark mode */
     --text-primary: oklch(0.98 0 0);
     --text-secondary: oklch(0.75 0 0);
@@ -126,24 +128,24 @@
   --color-foreground: var(--foreground);
   --color-card: var(--card);
   --color-card-foreground: var(--card-foreground);
-  
+
   /* Interactive colors */
   --color-primary: var(--primary);
   --color-primary-foreground: var(--primary-foreground);
   --color-secondary: var(--secondary);
   --color-secondary-foreground: var(--secondary-foreground);
-  
+
   /* Utility colors */
   --color-muted: var(--muted);
   --color-muted-foreground: var(--muted-foreground);
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
-  
+
   /* Borders */
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
-  
+
   /* Status colors */
   --color-destructive: var(--destructive);
   --color-destructive-foreground: var(--destructive-foreground);
@@ -151,7 +153,7 @@
   --color-success-foreground: var(--success-foreground);
   --color-warning: var(--warning);
   --color-warning-foreground: var(--warning-foreground);
-  
+
   /* Custom semantic colors */
   --color-text-primary: var(--text-primary);
   --color-text-secondary: var(--text-secondary);
@@ -178,35 +180,35 @@
   .text-on-primary {
     color: var(--color-text-on-primary);
   }
-  
+
   /* Background utilities */
   .bg-card-subtle {
     background-color: oklch(from var(--card) l c h / 0.5);
   }
-  
+
   .bg-muted-subtle {
     background-color: oklch(from var(--muted) l c h / 0.5);
   }
-  
+
   /* Border utilities */
   .border-subtle {
     border-color: oklch(from var(--border) l c h / 0.3);
   }
-  
+
   /* Glass effect utilities */
   .glass {
     @apply bg-card/50 backdrop-blur-sm border border-border/20;
   }
-  
+
   .glass-hover {
     @apply hover:bg-card/70 hover:border-border/30;
   }
-  
+
   /* Animation utilities */
   .animate-fade-in {
     animation: fadeIn 0.5s ease-in-out;
   }
-  
+
   .animate-slide-up {
     animation: slideUp 0.6s ease-out;
   }
@@ -241,21 +243,21 @@
   .magic-card {
     @apply relative overflow-hidden rounded-xl border border-border/20 bg-card/30 backdrop-blur-sm transition-all duration-300;
   }
-  
+
   .magic-card:hover {
     @apply border-border/40 bg-card/50;
   }
-  
+
   /* Enhanced link styles */
   .link-hover {
     @apply transition-colors duration-200 hover:text-primary;
   }
-  
+
   /* Status badge */
   .status-badge {
     @apply inline-flex items-center gap-2 px-3 py-1.5 text-sm font-medium rounded-full border border-border/30;
   }
-  
+
   /* Tech stack badge */
   .tech-badge {
     @apply px-2.5 py-1 text-xs font-medium bg-secondary/50 text-secondary-foreground rounded-md border border-border/30;

@@ -1,9 +1,78 @@
-import React from 'react'
+"use client";
 
-const page = () => {
+import React from "react";
+import { ProjectCard } from "@/src/components/ui/project-card";
+import { projects } from "@/src/utils/constants";
+
+
+ const page = () => {
+  const displayedProjects = projects;
+
   return (
-    <div>page</div>
-  )
-}
+    <section className="py-8 lg:py-16 px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto">
+        {/* Section Header */}
+        <header className="text-center mb-14 lg:mb-20">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-foreground">
+           My Projects
+          </h2>
+          <p className="mt-4 text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+            A showcase of my work in full-stack & blockchain applications.
+          </p>
+        </header>
 
-export default page
+        {/* Projects Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10 mb-20">
+          {displayedProjects.map((project, index) => (
+            <div
+              key={project.title}
+              className="group h-full"
+              style={{
+                animationDelay: `${index * 120}ms`,
+                animationFillMode: "both",
+              }}
+            >
+              <ProjectCard
+                title={project.title}
+                description={project.description}
+                tech={project.tech}
+                index={index}
+                link={project.link}
+                source={project.code}
+              />
+            </div>
+          ))}
+        </div>
+
+        {/* Footer CTA */}
+        {/* <footer className="border-t border-border/20 pt-12">
+          <div className="text-center space-y-6">
+            <Link
+              href="/projects"
+              className="group inline-flex items-center gap-3 text-lg font-semibold text-foreground hover:text-foreground/80 transition-all duration-300 hover:gap-4"
+            >
+              <span>Explore More Projects</span>
+              <div className="flex items-center justify-center w-8 h-8 rounded-full border border-border/30 group-hover:border-border/60 group-hover:bg-muted/50 transition-all duration-300">
+                <svg
+                  className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={1.5}
+                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                  />
+                </svg>
+              </div>
+            </Link>
+          </div>
+        </footer> */}
+      </div>
+    </section>
+  );
+};
+
+export default page;

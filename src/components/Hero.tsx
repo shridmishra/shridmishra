@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export const Hero = () => {
   return (
-    <section className="relative pt-16 pb-24 lg:pt-20 lg:pb-32 px-6 lg:px-8">
+    <section className="relative pt-6 pb-6 lg:pt-12 lg:pb-12 px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
         {/* Profile Header */}
         <div className="flex items-start gap-8 mb-12">
@@ -20,24 +20,24 @@ export const Hero = () => {
           </div>
           
           <div className="flex-1 pt-2">
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-primary mb-3 leading-tight">
+            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-primary mb-3 leading-tight">
               Shrid Mishra
             </h1>
-            <p className="text-lg sm:text-xl text-muted-foreground/80 font-medium">
+            <p className="text-md sm:text-lg text-muted-foreground/80 font-medium">
               21, He/Him
             </p>
           </div>
         </div>
 
         {/* Professional Info */}
-        <div className="space-y-6 max-w-2xl">
+        <div className="space-y-3 max-w-2xl">
           <div className="flex items-center gap-4">
             <div className="w-6 h-6 flex items-center justify-center flex-shrink-0">
               <svg className="w-5 h-5 text-muted-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
               </svg>
             </div>
-            <span className="text-lg sm:text-xl text-foreground font-medium">
+            <span className="text-lg sm:text-xl text-muted-foreground font-medium">
               Full Stack & Blockchain Engineer 
             </span>
           </div>
