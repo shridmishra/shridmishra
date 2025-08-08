@@ -9,6 +9,7 @@ import {
 } from "@tabler/icons-react";
 import { FloatingDock } from "./ui/floating-dock";
 import { ThemeToggle } from "./ThemeToggle";
+
 const Dock = () => {
     const dockLinks = [
         {
@@ -16,33 +17,33 @@ const Dock = () => {
             icon: (
                 <IconHome className="h-full w-full text-muted-foreground hover:text-primary transition-colors" />
             ),
-            href: "#",
+            href: "/",
         },
         {
-            title: "Products",
+            title: "Projects",
             icon: (
                 <IconTerminal2 className="h-full w-full text-muted-foreground hover:text-primary transition-colors" />
             ),
-            href: "#",
+            href: "/projects",
         },
         {
-            title: "Twitter",
+            title: "X",
             icon: (
                 <IconBrandX className="h-full w-full text-muted-foreground hover:text-primary transition-colors" />
             ),
-            href: "#",
+            href: "https://x.com/shridmishra",
         },
         {
             title: "GitHub",
             icon: (
                 <IconBrandGithub className="h-full w-full text-muted-foreground hover:text-primary transition-colors" />
             ),
-            href: "#",
+            href: "https://github.com/shridmishra",
         },
         {
             title: "Toggle Theme",
-            icon: <ThemeToggle />, // ✅ Add the toggle here
-            href: "#",
+            icon: <ThemeToggle />, 
+            
         },
     ];
 

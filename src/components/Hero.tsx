@@ -1,88 +1,100 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 
 export const Hero = () => {
   return (
-    <section className="relative  pb-18 lg:pb-24 px-4">
-      <div className="max-w-3xl">
+    <section className="relative pt-16 pb-24 lg:pt-20 lg:pb-32 px-6 lg:px-8">
+      <div className="max-w-4xl mx-auto">
         {/* Profile Header */}
-        <div className="flex items-start gap-6 mb-8">
-          <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl overflow-hidden border border-border/30 shadow-sm bg-card">
+        <div className="flex items-start gap-8 mb-12">
+          <div className="w-24 h-24 sm:w-28 sm:h-28 lg:w-32 lg:h-32 rounded-3xl overflow-hidden border border-border/20 shadow-lg bg-card flex-shrink-0">
             <Image
-              src="/assets/me.jpg"
-              width={96}
-              height={96}
+              src="/pfp.webp"
+              width={128}
+              height={128}
               alt="Shrid Mishra"
               className="w-full h-full object-cover"
+              priority
             />
           </div>
           
-          <div className="flex-1 pt-2  ">
-            <h1 className="text-xl sm:text-2xl font-medium text-primary mb-1">
+          <div className="flex-1 pt-2">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-primary mb-3 leading-tight">
               Shrid Mishra
             </h1>
-            <p className="text-medium text-muted">
+            <p className="text-lg sm:text-xl text-muted-foreground/80 font-medium">
               21, He/Him
             </p>
           </div>
         </div>
 
         {/* Professional Info */}
-        <div className="space-y-4">
-          <div className="flex items-center gap-3">
-            <div className="w-5 h-5 flex items-center justify-center">
-              <svg className="w-4 h-4 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div className="space-y-6 max-w-2xl">
+          <div className="flex items-center gap-4">
+            <div className="w-6 h-6 flex items-center justify-center flex-shrink-0">
+              <svg className="w-5 h-5 text-muted-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
               </svg>
             </div>
-            <span className="text-base text-secondary">
-              Senior Full Stack Engineer & DeFi Architect
+            <span className="text-lg sm:text-xl text-foreground font-medium">
+              Full Stack & Blockchain Engineer 
             </span>
           </div>
 
-          <div className="flex items-center gap-3">
-            <div className="w-5 h-5 flex items-center justify-center">
-              <svg className="w-4 h-4 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className="flex items-center gap-4">
+            <div className="w-6 h-6 flex items-center justify-center flex-shrink-0">
+              <svg className="w-5 h-5 text-muted-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
               </svg>
             </div>
-            <span className="text-base text-secondary">
+            <span className="text-lg text-muted-foreground">
               Mumbai, India
             </span>
           </div>
 
-          <div className="flex items-center gap-3">
-            <div className="w-5 h-5 flex items-center justify-center">
-              <svg className="w-4 h-4 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className="flex items-center gap-4">
+            <div className="w-6 h-6 flex items-center justify-center flex-shrink-0">
+              <svg className="w-5 h-5 text-muted-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 7.89a2 2 0 002.83 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
               </svg>
             </div>
-            <span className="text-base text-secondary">
-              shrid@example.com
-            </span>
+            <Link 
+              href="mailto:shridmishra00@gmail.com"
+              className="text-lg text-muted-foreground hover:text-foreground transition-colors duration-200"
+            >
+              shridmishra00@gmail.com
+            </Link>
           </div>
 
-          <div className="flex items-center gap-3">
-            <div className="w-5 h-5 flex items-center justify-center">
-              <svg className="w-4 h-4 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className="flex items-center gap-4">
+            <div className="w-6 h-6 flex items-center justify-center flex-shrink-0">
+              <svg className="w-5 h-5 text-muted-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9v-9m0-9v9" />
               </svg>
             </div>
-            <span className="text-base text-secondary">
-              shrid.dev
-            </span>
+            <Link 
+              href="https://shrid.in" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-lg text-muted-foreground hover:text-foreground transition-colors duration-200 hover:underline"
+            >
+              shrid.in
+            </Link>
           </div>
 
-          <div className="flex items-center gap-3">
-            <div className="w-5 h-5 flex items-center justify-center">
-              <div className="w-2 h-2 bg-emerald-500 rounded-full"></div>
+          <div className="flex items-center gap-4 pt-2">
+            <div className="w-6 h-6 flex items-center justify-center flex-shrink-0">
+              <div className="w-3 h-3 bg-emerald-500 rounded-full animate-pulse shadow-sm"></div>
             </div>
-            <span className="text-base text-secondary">
-              Available for consulting
+            <span className="text-lg text-muted-foreground font-medium">
+              Available for projects
             </span>
           </div>
         </div>
+
+        
       </div>
     </section>
   );
