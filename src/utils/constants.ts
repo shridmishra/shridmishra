@@ -1,6 +1,5 @@
 import { I_Experience, } from "@/src/types/type";
 
-// Professional Experience Data (Unchanged from Original)
 export const experienceData: I_Experience[] = [
   {
     company_link: "https://www.beiyo.in/",
@@ -20,8 +19,16 @@ export const experienceData: I_Experience[] = [
   },
 ];
 
-// Project Data (Enhanced with Expanded Tech Stack)
 export const projects = [
+  {
+    title: "Grocery Store App",
+    description: "A streamlined grocery shopping app with cart management and payment integration.",
+    tech: ["JavaScript", "React", "Node.js", "Express", "Stripe", "MongoDB"],
+    status: "Live",
+    year: "2025",
+    link: "https://grocery-store.shrid.in",
+    code: "https://github.com/shridmishra/grocery-store",
+  },
   {
     title: "MediChain",
     description: "A Solana-based platform for secure health data sharing with PDA-based permissions and a responsive doctor dashboard.",
@@ -75,15 +82,7 @@ export const projects = [
     link: "https://crypto-explorer.shrid.in",
     code: "https://github.com/shridmishra/crypto-explorer",
   },
-  {
-    title: "Grocery Store App",
-    description: "A streamlined grocery shopping app with cart management and payment integration.",
-    tech: ["JavaScript", "React", "Node.js", "Express", "Stripe", "MongoDB"],
-    status: "Live",
-    year: "2025",
-    link: "https://grocery-store.shrid.in",
-    code: "https://github.com/shridmishra/grocery-store",
-  },
+  
   {
     title: "SM3 Tech",
     description: "A tech services platform offering scalable solutions for businesses.",
