@@ -5,7 +5,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { MagicCard } from "./ui/magic-card";
 import { I_Experience } from "../types/type";
-import { experienceData } from "../utils/constants";
+import { experienceData } from "../lib/constants";
 
 
 export const ExperienceSection = () => {

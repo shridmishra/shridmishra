@@ -3,7 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import { ProjectCard } from "@/src/components/ui/project-card";
-import { projects } from "../utils/constants";
+import { projects } from "../lib/constants";
 import Title from "./ui/title";
 
 export const ProjectsSection = () => {

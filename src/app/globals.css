@@ -1,21 +1,34 @@
 /* 1. Import font and Tailwind */
-@import url("https://db.onlinewebfonts.com/c/102353a74d2e0700af3e11ef8a917b26?family=Bricolage+Grotesque");
+/* 1. Import fonts */
+@import url("https://db.onlinewebfonts.com/c/102353a74d2e0700af3e11ef8a917b26?family=Bricolage+Grotesque"); /* Sans */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap"); /* Serif */
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap"); /* Mono */
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap"); /* Display */
+
+/* 2. Import Tailwind */
 @import "tailwindcss";
 
-/* 2. Define font */
+/* 3. Define font variables */
 @theme {
   --font-sans: "Bricolage Grotesque", sans-serif;
+  --font-serif: "Playfair Display", serif;
+  --font-mono: "Fira Code", monospace;
+  --font-display: "Space Grotesk", sans-serif;
 }
 
-/* 3. Global styles */
+/* 4. Global styles */
 @layer base {
   html,
   body {
-    font-family: var(--font-sans);
+    font-family: var(--font-mono);
     @apply bg-background text-foreground antialiased;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
+
+ 
+}
+
 
   * {
     @apply border-border;
@@ -30,7 +43,7 @@
   *:focus-visible {
     @apply outline-2 outline-offset-2 outline-primary/50;
   }
-}
+
 
 /* 4. Dark mode support using `class="dark"` */
 @custom-variant dark (&:where(.dark, .dark *));
@@ -100,7 +113,7 @@
 
     /* Borders and separators */
     --border: oklch(0.28 0 0);
-    --background-border: oklch(1 0 0 / 40%);
+    --background-border: oklch(1 0 0 / 5%);
     --input: oklch(0.28 0 0);
     --ring: oklch(0.75 0.2 250);
 
