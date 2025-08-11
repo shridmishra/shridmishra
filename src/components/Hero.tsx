@@ -24,31 +24,31 @@ export const Hero = () => {
 
   {/* Dashed border — always in DOM, animation driven by CSS selector above */}
   <div
-    className="absolute -inset-0.5  border-2 border-dashed border-corner z-10 border-flicker"
+    className="absolute -inset-1 border-[1.5px] border-dashed  z-10 border-flicker !border-accent-foreground/30"
     aria-hidden="true"
   ></div>
 
   {/* Corner brackets — render above border */}
-  <div className="absolute -inset-0.25 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20">
+  <div className="absolute -inset-[2px] pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20">
     {/* top-left */}
     <div className="absolute -top-0.5 -left-0.5 w-4 h-4">
-      <div className="absolute top-0 left-0 w-2 h-0.5 bg-accent-foreground corner-flicker z-20"></div>
-      <div className="absolute top-0 left-0 w-0.5 h-2 bg-accent-foreground corner-flicker z-20"></div>
+      <div className="absolute top-0 left-0 w-2 h-[0.5px] bg-accent-foreground corner-flicker z-20"></div>
+      <div className="absolute top-0 left-0 w-[0.5px] h-2 bg-accent-foreground corner-flicker z-20"></div>
     </div>
     {/* top-right */}
     <div className="absolute -top-0.5 -right-0.5 w-4 h-4">
-      <div className="absolute top-0 right-0 w-2 h-0.5 bg-accent-foreground corner-flicker z-20"></div>
-      <div className="absolute top-0 right-0 w-0.5 h-2 bg-accent-foreground  corner-flicker z-20"></div>
+      <div className="absolute top-0 right-0 w-2 h-[0.5px] bg-accent-foreground corner-flicker z-20"></div>
+      <div className="absolute top-0 right-0 w-[0.5px] h-2 bg-accent-foreground  corner-flicker z-20"></div>
     </div>
     {/* bottom-left */}
     <div className="absolute -bottom-0.5 -left-0.5 w-4 h-4 ">
-      <div className="absolute bottom-0 left-0 w-2 h-0.5 bg-accent-foreground  corner-flicker z-20"></div>
-      <div className="absolute bottom-0 left-0 w-0.5 h-2 bg-accent-foreground corner-flicker z-20"></div>
+      <div className="absolute bottom-0 left-0 w-2 h-[0.5px] bg-accent-foreground  corner-flicker z-20"></div>
+      <div className="absolute bottom-0 left-0 w-[0.5px] h-2 bg-accent-foreground corner-flicker z-20"></div>
     </div>
     {/* bottom-right */}
     <div className="absolute -bottom-0.5 -right-0.5 w-4 h-4">
-      <div className="absolute bottom-0 right-0 w-2 h-0.5 bg-accent-foreground corner-flicker z-20"></div>
-      <div className="absolute bottom-0 right-0 w-0.5 h-2 bg-accent-foreground corner-flicker z-20"></div>
+      <div className="absolute bottom-0 right-0 w-2 h-[0.5px] bg-accent-foreground corner-flicker z-20"></div>
+      <div className="absolute bottom-0 right-0 w-[0.5px] h-2 bg-accent-foreground corner-flicker z-20"></div>
     </div>
   </div>
 </div>
