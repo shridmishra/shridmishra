@@ -8,18 +8,54 @@ export const Hero = () => {
       <div className="max-w-4xl mx-auto">
         {/* Profile Header */}
         <div className="flex items-start gap-8 mb-12">
-          <div className="w-24 h-24 sm:w-28 sm:h-28 lg:w-32 lg:h-32 rounded-3xl overflow-hidden border border-border/20 shadow-lg bg-card flex-shrink-0">
-            <Image
-              src="/pfp.webp"
-              width={128}
-              height={128}
-              alt="Shrid Mishra"
-              className="w-full h-full object-cover"
-              priority
-            />
-          </div>
-          
+
+<div className="relative group w-32 h-32 flex-shrink-0 p-1">
+  {/* Image (static, never animated) */}
+  <div className="w-full h-full overflow-hidden shadow-lg bg-card z-0">
+    <Image
+      src="/pfp.webp"
+      width={128}
+      height={128}
+      alt="Shrid Mishra"
+      className="w-full h-full object-cover filter grayscale group-hover:filter-none transition-all duration-300"
+      priority
+    />
+  </div>
+
+  {/* Dashed border — always in DOM, animation driven by CSS selector above */}
+  <div
+    className="absolute -inset-0.5  border-2 border-dashed border-corner z-10 border-flicker"
+    aria-hidden="true"
+  ></div>
+
+  {/* Corner brackets — render above border */}
+  <div className="absolute -inset-0.25 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20">
+    {/* top-left */}
+    <div className="absolute -top-0.5 -left-0.5 w-4 h-4">
+      <div className="absolute top-0 left-0 w-2 h-0.5 bg-accent-foreground corner-flicker z-20"></div>
+      <div className="absolute top-0 left-0 w-0.5 h-2 bg-accent-foreground corner-flicker z-20"></div>
+    </div>
+    {/* top-right */}
+    <div className="absolute -top-0.5 -right-0.5 w-4 h-4">
+      <div className="absolute top-0 right-0 w-2 h-0.5 bg-accent-foreground corner-flicker z-20"></div>
+      <div className="absolute top-0 right-0 w-0.5 h-2 bg-accent-foreground  corner-flicker z-20"></div>
+    </div>
+    {/* bottom-left */}
+    <div className="absolute -bottom-0.5 -left-0.5 w-4 h-4 ">
+      <div className="absolute bottom-0 left-0 w-2 h-0.5 bg-accent-foreground  corner-flicker z-20"></div>
+      <div className="absolute bottom-0 left-0 w-0.5 h-2 bg-accent-foreground corner-flicker z-20"></div>
+    </div>
+    {/* bottom-right */}
+    <div className="absolute -bottom-0.5 -right-0.5 w-4 h-4">
+      <div className="absolute bottom-0 right-0 w-2 h-0.5 bg-accent-foreground corner-flicker z-20"></div>
+      <div className="absolute bottom-0 right-0 w-0.5 h-2 bg-accent-foreground corner-flicker z-20"></div>
+    </div>
+  </div>
+</div>
+
+
           <div className="flex-1 pt-2">
+
             <h1 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-primary mb-3 leading-tight">
               Shrid Mishra
             </h1>
@@ -30,7 +66,7 @@ export const Hero = () => {
         </div>
 
         {/* Professional Info */}
-        <div className="space-y-3 max-w-2xl">
+        <div className="space-y-1 max-w-2xl">
           <div className="flex items-center gap-4">
             <div className="w-6 h-6 flex items-center justify-center flex-shrink-0">
               <svg className="w-5 h-5 text-muted-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -38,7 +74,7 @@ export const Hero = () => {
               </svg>
             </div>
             <span className="text-lg sm:text-xl text-muted-foreground font-medium">
-              Full Stack & Blockchain Engineer 
+              Full Stack & Blockchain Engineer
             </span>
           </div>
 
@@ -60,7 +96,7 @@ export const Hero = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 7.89a2 2 0 002.83 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
               </svg>
             </div>
-            <Link 
+            <Link
               href="mailto:shridmishra00@gmail.com"
               className="text-lg text-muted-foreground hover:text-foreground transition-colors duration-200"
             >
@@ -74,8 +110,8 @@ export const Hero = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9v-9m0-9v9" />
               </svg>
             </div>
-            <Link 
-              href="https://shrid.in" 
+            <Link
+              href="https://shrid.in"
               target="_blank"
               rel="noopener noreferrer"
               className="text-lg text-muted-foreground hover:text-foreground transition-colors duration-200 hover:underline"
@@ -84,17 +120,17 @@ export const Hero = () => {
             </Link>
           </div>
 
-          <div className="flex items-center gap-4 pt-2">
+          <div className="flex items-center gap-4">
             <div className="w-6 h-6 flex items-center justify-center flex-shrink-0">
-              <div className="w-3 h-3 bg-emerald-500 rounded-full animate-pulse shadow-sm"></div>
+              <div className="w-2 h-2 bg-accent-foreground rounded-full animate-pulse shadow-sm"></div>
             </div>
-            <span className="text-lg text-muted-foreground font-medium">
+            <div className="text-lg text-muted-foreground font-medium">
               Available for projects
-            </span>
+            </div>
           </div>
         </div>
 
-        
+
       </div>
     </section>
   );
