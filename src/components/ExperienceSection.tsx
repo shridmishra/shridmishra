@@ -10,14 +10,14 @@ import { experienceData } from "../lib/constants";
 
 export const ExperienceSection = () => {
   return (
-    <section className="py-16 lg:py-20 px-6 lg:px-8">
+    <section className="py-18 lg:py-24 px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
         {/* Section Header */}
-        <header className="text-center my-14 lg:my-18">
+        <header className="text-center mb-14 lg:mb-16">
           <div className="text-2xl sm:text-3xl lg:text-4xl font-normal text-foreground mb-2 tracking-tight">
             Experience
           </div>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-md lg:text-lg text-muted-foreground max-w-2xl mx-auto">
             My professional journey building innovative solutions.
           </p>
         </header>
@@ -48,8 +48,8 @@ interface ExperienceCardProps {
 const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) => {
   return (
     <div>
-        <MagicCard  className="bg-card/30 backdrop-blur-sm">
-      <div className="p-0 lg:p-8 flex flex-col gap-6">
+        <MagicCard  className="bg-card/30 backdrop-blur-sm rounded-sm">
+      <div className="p-2 lg:p-4  flex flex-col gap-6">
         <div className="flex items-start gap-6">
           {/* Company Logo */}
           <Link
@@ -58,7 +58,7 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) => {
             rel="noopener noreferrer"
             className="flex-shrink-0 transition-transform hover:scale-105"
           >
-            <div className="w-16 h-16 lg:w-20 lg:h-20 rounded-xl overflow-hidden border border-border/30 bg-background shadow-sm">
+            <div className="w-16 h-16 lg:w-20 lg:h-20 rounded-sm overflow-hidden border border-border/30 bg-background shadow-sm">
               <Image
                 src={experience.company_logo}
                 alt={`${experience.company_name} logo`}
@@ -81,7 +81,7 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) => {
                 </p>
               </div>
               <span className="flex items-center gap-2 text-sm text-muted-foreground bg-muted/50 px-3 py-1.5 rounded-full border border-border/30 shrink-0">
-                <span className="w-2 h-2 rounded-full bg-emerald-500"></span>
+                
                 <span className="whitespace-nowrap font-medium">
                   {experience.duration}
                 </span>

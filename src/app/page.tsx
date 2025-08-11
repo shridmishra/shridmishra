@@ -1,13 +1,13 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Dock from "@/src/components/Dock";
 import { Hero } from "@/src/components/Hero";
 import { ExperienceSection } from "@/src/components/ExperienceSection";
 import { ProjectsSection } from "../components/ProjectsSection";
 // import Skills from "../components/Skills";
 // import RecentBlogs from "../components/RecentBlogs";
 import { InteractiveGridPattern } from "../components/ui/interactive-grid-pattern";
+import DockBar from "../components/Dock";
 // import { BentoGrid } from "../components/Bento";
 
 const PortfolioPage = () => {
@@ -24,7 +24,7 @@ const PortfolioPage = () => {
         <Hero />
         <ProjectsSection />
         <ExperienceSection />
-        <Dock />
+        <DockBar />
         {/* <BentoGrid/> */}
         {/* <Skills />
         <RecentBlogs /> */}

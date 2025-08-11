@@ -22,6 +22,7 @@ export const ThemeToggle = () => {
       height={50}
       widthIcon={28}
       heightIcon={28}
+      
     />
   );
 }

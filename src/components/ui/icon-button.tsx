@@ -35,7 +35,7 @@ export function IconButton({
         ref={ref}
         style={{ width, height }}
         whileHover={{ scale: 1.1 }}
-        className="relative flex aspect-square items-center justify-center rounded-full bg-gray-200 dark:bg-neutral-800"
+        className="relative flex aspect-square items-center justify-center rounded-full"
       >
         <motion.div
           style={{ width: widthIcon, height: heightIcon }}
