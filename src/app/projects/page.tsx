@@ -36,7 +36,7 @@ import { projects } from "@/src/lib/constants";
                 title={project.title}
                 description={project.description}
                 tech={project.tech}
-                index={index}
+                imageSrc={project.imageSrc}
                 link={project.link}
                 source={project.code}
               />

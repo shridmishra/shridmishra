@@ -48,7 +48,7 @@ interface ExperienceCardProps {
 const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) => {
   return (
     <div>
-        <MagicCard className="bg-card/30 backdrop-blur-sm">
+        <MagicCard  className="bg-card/30 backdrop-blur-sm">
       <div className="p-6 lg:p-8 flex flex-col gap-6">
         <div className="flex items-start gap-6">
           {/* Company Logo */}

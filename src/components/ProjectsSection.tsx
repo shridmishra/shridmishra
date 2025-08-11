@@ -32,9 +32,10 @@ export const ProjectsSection = () => {
                 title={project.title}
                 description={project.description}
                 tech={project.tech}
-                index={index}
+                
                 link={project.link}
                 source={project.code}
+                imageSrc={project.imageSrc}
               />
             </div>
           ))}
