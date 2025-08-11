@@ -13,10 +13,10 @@ export const ExperienceSection = () => {
     <section className="py-16 lg:py-20 px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
         {/* Section Header */}
-        <header className="text-center mb-12 lg:mb-16">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-foreground mb-4 tracking-tight">
+        <header className="text-center my-14 lg:my-18">
+          <div className="text-2xl sm:text-3xl lg:text-4xl font-normal text-foreground mb-2 tracking-tight">
             Experience
-          </h2>
+          </div>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             My professional journey building innovative solutions.
           </p>
@@ -49,7 +49,7 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) => {
   return (
     <div>
         <MagicCard  className="bg-card/30 backdrop-blur-sm">
-      <div className="p-6 lg:p-8 flex flex-col gap-6">
+      <div className="p-0 lg:p-8 flex flex-col gap-6">
         <div className="flex items-start gap-6">
           {/* Company Logo */}
           <Link
@@ -70,10 +70,10 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) => {
           </Link>
 
           {/* Experience Details */}
-          <div className="flex-1 min-w-0">
+          <div className="flex-1 ">
             <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-3">
               <div>
-                <h3 className="text-lg lg:text-xl font-semibold text-foreground leading-tight mb-1">
+                <h3 className="text-lg lg:text-xl font-medium text-foreground/80 leading-tight mb-1">
                   {experience.job_title}
                 </h3>
                 <p className="text-base text-muted-foreground font-medium">

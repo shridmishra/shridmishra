@@ -9,7 +9,7 @@ export const words = [
 export const experienceData: I_Experience[] = [
   {
     company_link: "https://www.beiyo.in/",
-    company_logo: "/beiyo.png",
+    company_logo: "/assets/beiyo.png",
     company_name: "Beiyo",
     duration: "2024 - 2025",
     job_title: "Backend Developer",
@@ -17,7 +17,7 @@ export const experienceData: I_Experience[] = [
   },
   {
     company_link: "#",
-    company_logo: "/freelance-icon.webp",
+    company_logo: "/assets/freelance-icon.webp",
     company_name: "Freelance",
     duration: "2023 - Present",
     job_title: "FullStack Developer",
@@ -32,7 +32,7 @@ export const projects = [
     tech: [ "React", "Stripe", "MongoDB"],
     status: "Live",
     year: "2025",
-    link: "https://grocery-store.shrid.in",
+    link: "https://grocery.shrid.in",
     code: "https://github.com/shridmishra/grocery-store",
     imageSrc: "/projects/grocery.png"
   },

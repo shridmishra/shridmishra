@@ -45,7 +45,7 @@ export const ProjectCard = ({
                 alt={title}
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
-                className="object-cover filter grayscale group-hover:filter-none"
+                className="object-cover lg:group-hover:filter-none lg:filter lg:grayscale"
               />
             </div>
           </a>
@@ -56,7 +56,7 @@ export const ProjectCard = ({
               alt={title}
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
-              className="object-cover"
+              className="object-cover "
             />
           </div>
         )}

@@ -2,7 +2,7 @@ import React from 'react'
 
 const Text = ({ text }: { text: string }) => {
     return (
-        <span className="text-lg sm:text-md text-foreground/50 font-medium">
+        <span className="text-md lg:text-lg text-foreground/50 font-medium">
             {text}
         </span>
     )

@@ -11,14 +11,14 @@ export const ProjectsSection = () => {
   const displayedProjects = projects.slice(0, 6);
 
   return (
-    <section className="py-8 lg:py-16 px-6 lg:px-8">
+    <section className="pt-8 lg:pt-16 px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <Title title="Proof Of Work" subtitle="A showcase of my work in full-stack & blockchain applications." />
         
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10 mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10 mb-8">
           {displayedProjects.map((project, index) => (
             <div
               key={project.title}
@@ -42,11 +42,11 @@ export const ProjectsSection = () => {
         </div>
 
         {/* Footer CTA */}
-        <footer className="border-t border-border/20 ">
-          <div className="text-center ">
+        <footer >
+          <div className="text-end">
             <Link
               href="/projects"
-              className="group inline-flex items-center gap-3 text-lg font-semibold text-foreground hover:text-foreground/80 transition-all duration-300 hover:gap-4"
+              className="group inline-flex items-center gap-3 text-md lg:text-lg font-normal text-foreground hover:text-foreground/80 transition-all duration-300 hover:gap-4"
             >
               <span>Explore More Projects</span>
               <div className="flex items-center justify-center w-8 h-8 rounded-full border border-border/30 group-hover:border-border/60 group-hover:bg-muted/50 transition-all duration-300">

@@ -3,6 +3,7 @@
 import React, { useCallback, useEffect } from "react";
 import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
 import { cn } from "@/src/lib/utils";
+import { useTheme } from "next-themes";
 
 export interface MagicCardProps
   extends React.HTMLAttributes<HTMLDivElement> {
@@ -16,12 +17,19 @@ export const MagicCard: React.FC<MagicCardProps> = ({
   children,
   className,
   gradientSize = 200,
-  gradientColor = "rgba(38, 38, 38, 0.6)",
+  gradientColor,
   gradientOpacity = 0.8,
   ...props
 }) => {
   const mouseX = useMotionValue(-gradientSize);
   const mouseY = useMotionValue(-gradientSize);
+  const {theme} = useTheme();
+   const finalGradientColor =
+    gradientColor ??
+    (theme === "dark"
+      ? "rgba(38, 38, 38, 0.6)" // dark mode default
+      : "rgba(252, 252, 252, 0.6)"); // light mode default
+
 
   const handleMouseMove = useCallback(
     (e: React.MouseEvent<HTMLDivElement>) => {
@@ -47,7 +55,7 @@ export const MagicCard: React.FC<MagicCardProps> = ({
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       className={cn(
-        "group relative flex size-full flex-col overflow-hidden rounded-xl border border-border/50 bg-card text-foreground shadow-sm transition-all duration-300 hover:border-border/40 hover:shadow-lg",
+        "group relative flex size-full flex-col overflow-hidden border border-border/50 bg-card text-foreground shadow-sm transition-all duration-300 hover:border-border/40 hover:shadow-lg",
         "min-h-[80px]", 
         className
       )}
@@ -59,10 +67,10 @@ export const MagicCard: React.FC<MagicCardProps> = ({
       {/* Gradient Hover Effect */}
       <motion.div
         aria-hidden="true"
-        className="pointer-events-none absolute -inset-px rounded-xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+        className="pointer-events-none absolute -inset-px  opacity-0 transition-opacity duration-300 group-hover:opacity-100"
         style={{
           background: useMotionTemplate`
-            radial-gradient(${gradientSize}px circle at ${mouseX}px ${mouseY}px, ${gradientColor}, transparent 100%)
+            radial-gradient(${gradientSize}px circle at ${mouseX}px ${mouseY}px, ${finalGradientColor}, transparent 100%)
           `,
           opacity: gradientOpacity,
         }}

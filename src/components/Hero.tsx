@@ -22,22 +22,35 @@ export const Hero = () => {
         {/* Profile Header */}
         <div className="flex flex-col sm:flex-row sm:items-end gap-6 sm:gap-8 mb-4 sm:mb-6">
           {/* Profile Picture */}
-          <BorderFrame className="w-28 h-28 sm:w-32 sm:h-32 flex-shrink-0 mx-auto sm:mx-0">
-            <Image
-              src="/pfp.webp"
-              width={128}
-              height={128}
-              alt="Shrid Mishra"
-              className="w-full h-full object-cover filter grayscale group-hover:filter-none transition-all duration-300"
-              priority
-            />
-          </BorderFrame>
 
-          
-          <div className="flex-1 text-center sm:text-left">
-            <div className="text-xl sm:text-2xl lg:text-3xl font-medium mb-1 leading-tight flex items-center gap-2">
+          <div className="group flex items-start">
+            <BorderFrame className="w-28 h-28 sm:w-32 sm:h-32 flex-shrink-0 ">
+              <Image
+                src="/assets/pfp.webp"
+                width={128}
+                height={128}
+                alt="Shrid Mishra"
+                className="
+        w-full h-full object-cover 
+        transition-all duration-300
+       lg:group-hover:filter-none lg:filter lg:grayscale
+        
+      "
+                priority
+              />
+            </BorderFrame>
+          </div>
+
+
+
+
+
+
+
+          <div className="flex-1  ">
+            <div className="text-xl sm:text-2xl lg:text-3xl font-medium mb-1 leading-tight flex items-center gap-2 ">
               Shrid Mishra
-              <BadgeCheck className="text-foreground/80"/>
+              <BadgeCheck className="text-foreground/80" />
             </div>
             <FlipWords
               words={words}
@@ -48,7 +61,7 @@ export const Hero = () => {
 
         {/* Professional Info */}
         <div className="space-y-1 max-w-2xl mx-auto sm:mx-0">
-          <div className="text-muted my-8 text-lg">I love both <span className="text-foreground">Design</span> & <span className="text-foreground">Development</span>. so, That means I can create beautiful and functional websites. I&apos;m always looking for new opportunities to learn and grow.</div>
+          <div className="text-muted my-8 text-md lg:text-lg">I love both <span className="text-foreground">Design</span> & <span className="text-foreground">Development</span>. so, That means I can create beautiful and functional websites. I&apos;m always looking for new opportunities to learn and grow.</div>
           <div className="flex items-center gap-3">
             <CodeXml className="w-5 h-5 text-muted-foreground flex-shrink-0" />
             <Text text="Full Stack & Blockchain Engineer" />
@@ -85,8 +98,8 @@ export const Hero = () => {
               <div className="w-2 h-2 bg-accent-foreground rounded-full animate-pulse shadow-sm"></div>
             </div>
             <div className="text-lg text-foreground/80 font-medium">
-                <Text text="Available for Hire"/>
-              
+              <Text text="Available for Hire" />
+
             </div>
           </div>
         </div>
