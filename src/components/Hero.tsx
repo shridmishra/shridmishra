@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
+import BorderFrame from "./ui/BorderFrame";
 
 export const Hero = () => {
   return (
@@ -9,49 +10,16 @@ export const Hero = () => {
         {/* Profile Header */}
         <div className="flex items-start gap-8 mb-12">
 
-<div className="relative group w-32 h-32 flex-shrink-0 p-1">
-  {/* Image (static, never animated) */}
-  <div className="w-full h-full overflow-hidden shadow-lg bg-card z-0">
-    <Image
-      src="/pfp.webp"
-      width={128}
-      height={128}
-      alt="Shrid Mishra"
-      className="w-full h-full object-cover filter grayscale group-hover:filter-none transition-all duration-300"
-      priority
-    />
-  </div>
-
-  {/* Dashed border — always in DOM, animation driven by CSS selector above */}
-  <div
-    className="absolute -inset-1 border-[1.5px] border-dashed  z-10 border-flicker !border-accent-foreground/30"
-    aria-hidden="true"
-  ></div>
-
-  {/* Corner brackets — render above border */}
-  <div className="absolute -inset-[2px] pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20">
-    {/* top-left */}
-    <div className="absolute -top-0.5 -left-0.5 w-4 h-4">
-      <div className="absolute top-0 left-0 w-2 h-[0.5px] bg-accent-foreground corner-flicker z-20"></div>
-      <div className="absolute top-0 left-0 w-[0.5px] h-2 bg-accent-foreground corner-flicker z-20"></div>
-    </div>
-    {/* top-right */}
-    <div className="absolute -top-0.5 -right-0.5 w-4 h-4">
-      <div className="absolute top-0 right-0 w-2 h-[0.5px] bg-accent-foreground corner-flicker z-20"></div>
-      <div className="absolute top-0 right-0 w-[0.5px] h-2 bg-accent-foreground  corner-flicker z-20"></div>
-    </div>
-    {/* bottom-left */}
-    <div className="absolute -bottom-0.5 -left-0.5 w-4 h-4 ">
-      <div className="absolute bottom-0 left-0 w-2 h-[0.5px] bg-accent-foreground  corner-flicker z-20"></div>
-      <div className="absolute bottom-0 left-0 w-[0.5px] h-2 bg-accent-foreground corner-flicker z-20"></div>
-    </div>
-    {/* bottom-right */}
-    <div className="absolute -bottom-0.5 -right-0.5 w-4 h-4">
-      <div className="absolute bottom-0 right-0 w-2 h-[0.5px] bg-accent-foreground corner-flicker z-20"></div>
-      <div className="absolute bottom-0 right-0 w-[0.5px] h-2 bg-accent-foreground corner-flicker z-20"></div>
-    </div>
-  </div>
-</div>
+<BorderFrame className="w-32 h-32 flex-shrink-0">
+  <Image
+    src="/pfp.webp"
+    width={128}
+    height={128}
+    alt="Shrid Mishra"
+    className="w-full h-full object-cover filter grayscale group-hover:filter-none transition-all duration-300"
+    priority
+  />
+</BorderFrame>
 
 
           <div className="flex-1 pt-2">
