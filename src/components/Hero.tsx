@@ -62,8 +62,8 @@ export const Hero = () => {
         {/* Professional Info */}
         <div className="space-y-1 max-w-2xl mx-auto sm:mx-0">
           <div className="text-muted my-8 text-md lg:text-lg">I love both <span className="text-foreground">Design</span> & <span className="text-foreground">Development</span>. so, That means I can create beautiful and functional websites. I&apos;m always looking for new opportunities to learn and grow.</div>
-          <div className="flex items-center gap-3">
-            <CodeXml className="w-5 h-5 text-muted-foreground flex-shrink-0" />
+          <div className="flex items-start lg:items-center gap-3 ">
+            <CodeXml className="w-5 h-5 text-muted-foreground flex-shrink-0 " />
             <Text text="Full Stack & Blockchain Engineer" />
 
           </div>

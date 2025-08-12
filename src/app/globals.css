@@ -1,12 +1,16 @@
-/* 1. Import font and Tailwind */
-/* 1. Import fonts */
 @import url("https://db.onlinewebfonts.com/c/102353a74d2e0700af3e11ef8a917b26?family=Bricolage+Grotesque"); /* Sans */
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap"); /* Serif */
 @import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap"); /* Mono */
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap"); /* Display */
 
+
+@import "tailwindcss";/* at the top of your global styles file */
+@source "./components/**/*.{js,jsx,ts,tsx}";
+
+/* 1. Import fonts */
+
 /* 2. Import Tailwind */
-@import "tailwindcss";
+
 
 /* 3. Define font variables */
 @theme {
@@ -14,6 +18,8 @@
   --font-serif: "Playfair Display", serif;
   --font-mono: "Fira Code", monospace;
   --font-display: "Space Grotesk", sans-serif;
+
+   
 }
 
 /* 4. Global styles */
@@ -21,7 +27,7 @@
   html,
   body {
     font-family: var(--font-mono);
-    @apply bg-background text-foreground antialiased;
+    @apply font-mono bg-background text-foreground antialiased;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
