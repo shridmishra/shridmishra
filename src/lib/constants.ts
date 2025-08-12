@@ -42,7 +42,7 @@ export const projects = [
     tech: ["Next.js","TypeScript", "Solana", "Anchor", "PostgreSQL"],
     status: "In Development",
     year: "2025",
-    link: "https://medichain-nine.vercel.app",
+    link: "https://medichain.shrid.in",
     code: "https://github.com/shridmishra/medichain",
     imageSrc: "/projects/medichain.png"
   },
@@ -64,11 +64,33 @@ export const projects = [
     tech: ["Next.js", "TypeScript","Framer"],
     status: "Live",
     year: "2025",
-    link: "https://landing-page.shrid.in",
+    link: "https://landing-page-shrid.vercel.app/",
     code: "https://github.com/shridmishra/landing-page",
     imageSrc: "/projects/landing.png"
   },
    {
+    title: "Crypto Explorer",
+    description: "Real-time cryptocurrency data visualization.",
+    tech: ["React", "TypeScript", "Node.js", "Chart.js", "CoinGecko API", "Axios"],
+    status: "Live",
+    year: "2025",
+    link: "https://crypto.shrid.in",
+    code: "https://github.com/shridmishra/crypto-explorer",
+    imageSrc: "/projects/crypto.png"
+  },
+   
+  {
+    title: "Old Portfolio",
+    description: "Personal portfolio with modern design.",
+    tech: ["Next.js", "TypeScript", "React", "Tailwind CSS", "Framer Motion", "Vercel"],
+    status: "Live",
+    year: "2025",
+    link: "https://portfolio.shrid.in",
+    code: "https://github.com/shridmishra/shridmishra-v1",
+
+    imageSrc: "/projects/portfolio.png"
+  },
+ {
     title: "Solana Contract",
     description: "Smart contract for SPL token staking.",
     tech: ["Rust", "Solana", "Anchor", "TypeScript", "Mocha"],
@@ -78,35 +100,6 @@ export const projects = [
     code: "https://github.com/shridmishra/solana-contracts",
     imageSrc: "/projects/solana.png"
   },
-  {
-    title: "Old Portfolio",
-    description: "Personal portfolio with modern design.",
-    tech: ["Next.js", "TypeScript", "React", "Tailwind CSS", "Framer Motion", "Vercel"],
-    status: "Live",
-    year: "2025",
-    link: "https://shridmishra.vercel.app",
-    code: "https://github.com/shridmishra/shridmishra-v1",
-
-    imageSrc: "/projects/portfolio.png"
-  },
-  {
-    title: "Crypto Explorer",
-    description: "Real-time cryptocurrency data visualization.",
-    tech: ["React", "TypeScript", "Node.js", "Chart.js", "CoinGecko API", "Axios"],
-    status: "Live",
-    year: "2025",
-    link: "https://crypto-explorer.shrid.in",
-    code: "https://github.com/shridmishra/crypto-explorer",
-    imageSrc: "/image.png"
-  },
-  {
-    title: "SM3 Tech",
-    description: "Tech services platform for businesses.",
-    tech: ["React", "TypeScript", "Node.js", "MongoDB", "AWS", "GraphQL"],
-    status: "Live",
-    year: "2025",
-    code: "https://github.com/shridmishra/sm3tech",
-    imageSrc: "/image.png"
-  }
+  
 ];
 

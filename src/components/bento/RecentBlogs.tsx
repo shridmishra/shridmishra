@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
 
 interface Blog {
   title: string;
@@ -9,8 +10,8 @@ interface Blog {
 
 const blogs: Blog[] = [
   {
-    title: "Intro to Solana Token Program with Anchor",
-    link: "https://medium.com/@shridmishra/intro-to-solana-token-program-with-anchor-123456",
+    title: "Connect Node.js to MongoDB: The Right Way",
+    link: "https://medium.com/@shridmishra/connect-node-js-to-mongodb-the-right-way-bb30dc27226e",
   },
   {
     title: "Fullstack Blockchain DApp with Next.js & Anchor",
@@ -21,17 +22,18 @@ const blogs: Blog[] = [
 
 export const RecentBlogs = () => {
   return (
-    <div className="bg-card rounded-xl p-4 shadow-md border-2">
-      <h2 className="text-lg  mb-3  font-light">Recent Blogs</h2>
-      <ul className="space-y-2 font-extralight">
+    <div className="bg-card rounded-xl p-4 shadow-md ">
+      <h2 className="text-lg mb-3 text-secondary-foreground/90 font-light">Recent Blogs</h2>
+      <ul className="space-y-2 font-extralight text-secondary">
         {blogs.map((blog, idx) => (
           <li key={idx}>
             <Link
               href={blog.link}
               target="_blank"
-              className="text-primary hover:underline "
+              className="text-secondary hover:underline flex"
             >
-              {blog.title}
+              {blog.title} 
+              <ArrowUpRight/>
             </Link>
           </li>
         ))}

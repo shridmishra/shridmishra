@@ -8,8 +8,9 @@ import { ProjectsSection } from "../components/ProjectsSection";
 import { InteractiveGridPattern } from "../components/ui/interactive-grid-pattern";
 import DockBar from "../components/Dock";
 import BentoGrid from "../components/BentoSection";
+import Footer from "../components/Footer";
 
-const PortfolioPage = () => {
+const Home = () => {
   const [mounted, setMounted] = useState(false);
   useEffect(() => setMounted(true), []);
   if (!mounted) return null;
@@ -20,13 +21,13 @@ const PortfolioPage = () => {
       <div className="relative z-10 max-w-xl sm:max-w-4xl mx-auto lg:mx-96 mt-6 px-4 sm:px-10 py-12 sm:py-16 mb-4">
         <Hero />
         <ProjectsSection />
+        <BentoGrid />
         <ExperienceSection />
-        <BentoGrid/>
-
         <DockBar />
+        <Footer/>
       </div>
     </div>
   );
 };
 
-export default PortfolioPage;
+export default Home;

@@ -12,11 +12,13 @@ import {
   SiNodedotjs,
   SiReact,
   SiJavascript,
-  SiHtml5,
-  SiCss3,
   SiGit,
   SiDocker,
   SiKubernetes,
+  SiExpress,
+  SiMongodb,
+  SiSolidity,
+  SiEthereum,
 } from "react-icons/si";
 
 const baseIcons = [
@@ -30,34 +32,36 @@ const baseIcons = [
   SiNodedotjs,
   SiReact,
   SiJavascript,
-  SiHtml5,
-  SiCss3,
+  SiExpress,
   SiGit,
   SiDocker,
   SiKubernetes,
+  SiMongodb,
+  SiSolidity,
+  SiEthereum
 ];
 
 export const SkillsCarousel = () => {
-  const repeatedIcons = [...baseIcons, ...baseIcons, ...baseIcons]; // repeated for continuous loop
+  const repeatedIcons = [...baseIcons, ...baseIcons, ...baseIcons]; 
   const half = Math.ceil(repeatedIcons.length / 2);
   const firstRow = repeatedIcons.slice(0, half);
   const secondRow = repeatedIcons.slice(half);
 
   return (
-    <div className="bg-card rounded-xl p-4 overflow-hidden shadow-md border-2  w-full h-full">
+    <div className="bg-card rounded-xl p-4 overflow-hidden shadow-md   w-full h-full">
       <h2 className="text-lg font-light  mb-3">Skills</h2>
       <div className="space-y-4">
         <motion.div
           className="flex gap-6"
-          animate={{ x: ["0%", "-50%"] }} // only half since we duplicated
+          animate={{ x: ["0%", "-50%"] }} 
           transition={{
             repeat: Infinity,
-            duration: 20,
+            duration: 7,
             ease: "linear",
           }}
         >
           {[...firstRow, ...firstRow].map((Icon, idx) => (
-            <Icon key={`row1-${idx}`} size={32} className="text-primary flex-shrink-0" />
+            <Icon key={`row1-${idx}`} size={32} className="text-secondary flex-shrink-0" />
           ))}
         </motion.div>
 
@@ -66,12 +70,12 @@ export const SkillsCarousel = () => {
           animate={{ x: ["-50%", "0%"] }} // opposite direction
           transition={{
             repeat: Infinity,
-            duration: 20,
+            duration: 7,
             ease: "linear",
           }}
         >
           {[...secondRow, ...secondRow].map((Icon, idx) => (
-            <Icon key={`row2-${idx}`} size={32} className="text-primary flex-shrink-0" />
+            <Icon key={`row2-${idx}`} size={32} className="text-secondary flex-shrink-0" />
           ))}
         </motion.div>
       </div>

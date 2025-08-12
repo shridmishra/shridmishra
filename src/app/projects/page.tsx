@@ -3,22 +3,20 @@
 import React from "react";
 import { ProjectCard } from "@/src/components/ui/project-card";
 import { projects } from "@/src/lib/constants";
+import DockBar from "@/src/components/Dock";
+import Title from "@/src/components/ui/title";
 
 
  const page = () => {
   const displayedProjects = projects;
 
   return (
-    <section className="py-8 lg:py-16 px-6 lg:px-8">
+    <div className="min-h-screen min-w-full bg-background relative overflow-hidden font-display antialiased selection:bg-pink-600 selection:text-foreground">
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
-        <header className="text-center mb-14 lg:mb-20">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-foreground">
-           My Projects
-          </h2>
-          <p className="mt-4 text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            A showcase of my work in full-stack & blockchain applications.
-          </p>
+        <header className="text-center my-14 lg:my-20">
+          <Title title="My Projects" subtitle="A showcase of my work in full-stack & blockchain applications."/>
+         
         </header>
 
         {/* Projects Grid */}
@@ -46,7 +44,8 @@ import { projects } from "@/src/lib/constants";
 
        
       </div>
-    </section>
+       <DockBar />
+    </div>
   );
 };
 

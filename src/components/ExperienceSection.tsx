@@ -13,7 +13,7 @@ export const ExperienceSection = () => {
     <section className="py-18 lg:py-24 px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
         {/* Section Header */}
-        <header className="text-center mb-14 lg:mb-16">
+        <header className="text-center mb-14 lg:mb-12">
           <div className="text-2xl sm:text-3xl lg:text-4xl font-normal text-foreground mb-2 tracking-tight">
             Experience
           </div>
@@ -49,7 +49,7 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) => {
   return (
     <div>
         <MagicCard  className="bg-card/30 backdrop-blur-sm rounded-sm">
-      <div className="p-2 lg:p-4  flex flex-col gap-6">
+      <div className="p-4 lg:p-8  flex flex-col gap-6">
         <div className="flex items-start gap-6">
           {/* Company Logo */}
           <Link
@@ -64,7 +64,7 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) => {
                 alt={`${experience.company_name} logo`}
                 width={80}
                 height={80}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover lg:group-hover:filter-none lg:filter lg:grayscale"
               />
             </div>
           </Link>
@@ -80,7 +80,7 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) => {
                   {experience.company_name}
                 </p>
               </div>
-              <span className="flex items-center gap-2 text-sm text-muted-foreground bg-muted/50 px-3 py-1.5 rounded-full border border-border/30 shrink-0">
+              <span className="flex items-center text-center px-4 text-sm text-muted-foreground bg-muted/50  py-1.5 rounded-full border border-border/30 max-w-32 mt-2">
                 
                 <span className="whitespace-nowrap font-medium">
                   {experience.duration}
