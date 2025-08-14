@@ -8,7 +8,7 @@ const info = {
   description:
     "Full-Stack Developer specializing in Next.js, TypeScript, and Solana. Crafting modern, scalable, and high-performance web experiences.",
   url: "https://shrid.in",
-  image: "/assets/pfp.webp", 
+  image: "https://shrid.in/assets/preview.png", 
 };
 
 export const metadata: Metadata = {
@@ -29,14 +29,11 @@ export const metadata: Metadata = {
     "Frontend Developer",
     "Backend Developer",
   ],
-  authors: [
-    {
-      name: info.name,
-      url: info.url,
-    },
-  ],
+  authors: [{ name: info.name, url: info.url }],
   creator: info.name,
   publisher: info.name,
+
+  // Open Graph (for WhatsApp, LinkedIn, Discord, Facebook)
   openGraph: {
     type: "website",
     url: info.url,
@@ -52,27 +49,25 @@ export const metadata: Metadata = {
       },
     ],
   },
+
+  // Twitter Card (Twitter/X)
   twitter: {
     card: "summary_large_image",
+    site: info.twitter, 
+    creator: info.twitter,
     title: `${info.name} | Full-Stack Developer`,
     description: info.description,
-    creator: info.twitter,
     images: [info.image],
   },
-  alternates: {
-    canonical: info.url,
-  },
+
+  // SEO
+  alternates: { canonical: info.url },
   robots: {
     index: true,
     follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      noimageindex: false,
-    },
+    googleBot: { index: true, follow: true, noimageindex: false },
   },
 };
-
 
 export default function RootLayout({
   children,
