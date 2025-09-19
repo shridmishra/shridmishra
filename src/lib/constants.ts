@@ -37,6 +37,16 @@ export const projects = [
     imageSrc: "/projects/grocery.png"
   },
   {
+  title: "AnimeFlix",
+  description: "Anime streaming platform with NeoBrutalism UI.",
+  tech: [ "NeoBrutalism", "YouTube API"],
+  status: "In Progress",
+  year: "2025",
+  link: "https://animeflix.shrid.in",
+  code: "https://github.com/shridmishra/animeflix",
+  imageSrc: "/projects/animeflix.png"
+},
+  {
     title: "MediChain",
     description: "Solana platform for secure health data.",
     tech: ["Next.js","TypeScript", "Solana", "Anchor", "PostgreSQL"],
@@ -47,6 +57,17 @@ export const projects = [
     imageSrc: "/projects/medichain.png"
   },
  
+ {
+  title: "Finboard",
+  description: "Finance dashboard with live stock and widgets.",
+  tech: ["ReCharts", "Zustland", "RGL"],
+  status: "In Progress",
+  year: "2025",
+  link: "https://finboard.shrid.in",
+  code: "https://github.com/shridmishra/finboard",
+  imageSrc: "/projects/finboard.png"
+}
+,
   
   {
     title: "Notes",
@@ -68,6 +89,7 @@ export const projects = [
     code: "https://github.com/shridmishra/landing-page",
     imageSrc: "/projects/landing.png"
   },
+  
    {
     title: "Crypto Explorer",
     description: "Real-time cryptocurrency data visualization.",
