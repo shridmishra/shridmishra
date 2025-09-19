@@ -38,7 +38,7 @@ export const projects = [
   },
   {
   title: "AnimeFlix",
-  description: "Anime streaming platform with NeoBrutalism UI.",
+  description: "Anime streaming platform with NeoBrutalism.",
   tech: [ "NeoBrutalism", "YouTube API"],
   status: "In Progress",
   year: "2025",
